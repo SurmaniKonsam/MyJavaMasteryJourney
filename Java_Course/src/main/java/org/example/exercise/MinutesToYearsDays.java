@@ -20,6 +20,7 @@ public class MinutesToYearsDays {
                 years= minutes/525600;
             }
             System.out.println(minutes+" min = "+years+" y and "+days+" d");
+            //sfa
         }
     }
 
