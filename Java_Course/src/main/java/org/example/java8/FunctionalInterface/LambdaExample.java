@@ -4,7 +4,13 @@ public class LambdaExample {
     public static void main(String[] args) {
         //passed the reference value
         showShape(()-> System.out.println("Learning lambda"));
-        
+
+        /**
+         * Method implementation should be same as that of the functional interface defined.
+         * Its just that since we are using functional interface, an interface which have one abstract method type but can have as many static
+         * and default it can. We need to implement the abstract method as well, via referencing the functional interface. The implementation is done
+         * as below.
+         */
         LambdaInterface square = () -> System.out.println("Shape of a square");
         LambdaInterface circle = () -> System.out.println("Shape of circle");
         showShape(square);

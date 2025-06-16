@@ -2,6 +2,10 @@ package main.java.org.example.java8.FunctionalInterface;
 
 
 class RunnableImpl implements Runnable{
+
+    /**
+     * Return type is void
+     */
     @Override
     public void run() {
         System.out.println("Run in life, race in life, win in life, conquer your destiny!!!");
@@ -22,6 +26,20 @@ public class RunnableInterface {
         Runnable runnable = () -> System.out.println("Your choices and your actions, define who you are!!!");
         Thread thread1 = new Thread(runnable);
         thread1.start();
+
+        /**
+         * Another approach as well
+         */
+        Thread thread2 = new Thread(()->{
+            System.out.println("Another approach which i remembered!!!");
+        });
+        thread2.start();
+        /*
+        Let's deduce something.
+        Thread takes in functional programming type style right.
+        Runnable is functional interface.
+
+         */
 
     }
 

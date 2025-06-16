@@ -17,7 +17,6 @@ interface CubeOfNumbers {
 
 public class FunctionFunctionalInterface{
 
-
     /**
      * Where our code run
      * @param args -> yeah what is it -> have to study : 4:51 PM 13-05-25
