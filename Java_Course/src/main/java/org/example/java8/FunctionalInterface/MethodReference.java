@@ -57,6 +57,7 @@ public class MethodReference {
         AnotherExample anotherExample = (x,y) -> x-y;
         BiFunction<Integer,Integer,Integer> difference = anotherExample::differenceOfNumber;
         System.out.println("First class citizen return : "+returnsFunctionalInterface((x,y) -> x-y,9,5));
+        System.out.println("via using function reference :"+difference.apply(8,2));
 
     }
 

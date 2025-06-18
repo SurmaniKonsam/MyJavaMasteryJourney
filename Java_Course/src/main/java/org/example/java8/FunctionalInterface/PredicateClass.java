@@ -2,7 +2,13 @@ package main.java.org.example.java8.FunctionalInterface;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 import java.util.function.Predicate;
+
+@FunctionalInterface
+interface PredicateExample{
+    boolean checkEven(int a);
+}
 
 /**
  * 13-05-25
@@ -12,9 +18,17 @@ public class PredicateClass {
     public static void main(String[] args) {
 
         /**
-         * Predicate it's cool, its basically functional interface manifestation of if condition
+         * Checks if number is even or not.
          */
-        Predicate<Integer> checkEven = (i) -> i%2 == 0;
+        PredicateExample predicateExample = (x) -> x%2==0;
+
+        Predicate<Integer> checkEven = predicateExample::checkEven;
+
+        Predicate<Integer> checkAnother = (x) -> x%2==0;
+
+
+
+
 
         /**
          * Arrays.asList is cool for converting any list of values into list.
