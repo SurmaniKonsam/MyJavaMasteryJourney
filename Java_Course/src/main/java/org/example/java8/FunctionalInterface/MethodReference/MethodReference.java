@@ -1,4 +1,4 @@
-package main.java.org.example.java8.FunctionalInterface;
+package main.java.org.example.java8.FunctionalInterface.MethodReference;
 
 
 import java.util.function.BiFunction;
