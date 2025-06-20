@@ -1,6 +1,9 @@
 package main.java.org.example.java8.FunctionalInterface;
 
 
+/**
+ * Implements Runnable Functional Interface having run as abstract void type
+ */
 class RunnableImpl implements Runnable{
 
     /**
@@ -38,7 +41,6 @@ public class RunnableInterface {
         Let's deduce something.
         Thread takes in functional programming type style right.
         Runnable is functional interface.
-
          */
 
     }
