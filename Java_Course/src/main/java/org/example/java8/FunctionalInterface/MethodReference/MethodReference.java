@@ -44,7 +44,7 @@ public class MethodReference {
         System.out.println("sum : "+biFunctionSum.apply(20,29));
         /**
          * BiFunction works only on static method of the class
-         * Does it work on the Function functional interface as well. Should i check on Math class
+         * Does it work on the Function functional interface as well. Should I check on Math class
          */
         Function<Integer,Integer> square = MethodReference::squareOfNumber;
         System.out.println(square.apply(9));

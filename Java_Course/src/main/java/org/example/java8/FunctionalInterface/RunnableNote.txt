@@ -44,7 +44,7 @@ So,
     and knock off Sasuke.
 
 
-7. We can wrap a custom functional interface to the Runnable reference.
+7. We can wrap/adapt to a custom functional interface to the Runnable reference.
     Why is it required?
     -> The reason is that Thread was designed to accept only the Runnable interface — it's a strict type contract.
     Thread takes runnable as its parameter, it means it would
