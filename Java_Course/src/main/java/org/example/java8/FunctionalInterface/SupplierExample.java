@@ -2,6 +2,10 @@ package main.java.org.example.java8.FunctionalInterface;
 
 import java.util.function.Supplier;
 
+/**
+ * Supplier lets' you return a result of type specified in the Supplier</Generic_Return_Type>.
+ * Yes, it only lets you return a result, it's like a getter in the world of functional interface.
+ */
 public class SupplierExample {
     public static void main(String[] args) {
         /**

@@ -1,4 +1,4 @@
-package main.java.org.example.java8.FunctionalInterface.MethodReference;
+package main.java.org.example.java8.MethodReference;
 
 /**
  * Method Reference

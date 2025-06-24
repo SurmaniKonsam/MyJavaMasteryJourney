@@ -22,7 +22,8 @@ public class FunctionFunctionalInterface{
      * @param args -> yeah what is it -> have to study : 4:51 PM 13-05-25
      */
     public static void main(String[] args) {
-        Function<Integer,Integer> rdCb = x -> x*x*x;
+        CubeOfNumbers cubeOfNumbers = x -> x*x*x;
+        Function<Integer,Integer> rdCb = cubeOfNumbers::returnCube;
         System.out.println(rdCb.apply(12));
 
     }
