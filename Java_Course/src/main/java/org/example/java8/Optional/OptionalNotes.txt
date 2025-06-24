@@ -1,0 +1,47 @@
+****Optional****
+1. Optional is used for checking null pointer exception, that is if found one in (Optional.ofNullable(return type object)
+    it will let you get another object if any null pointer exception is observed .
+2. You can check nullable for an object returned by optional.OfNullable(returnTypeObject);
+3. Also, optional when returned can give you few very important methods they are:
+    1. isPresent() -> return boolean true for if the object you are looking for via optional is present. If its present
+    it will return true.
+    2. isEmpty()
+    3. get() -> should be used along with isPresent(), because its obvious only if the object you are looking for
+    present then should you be return the object and we do so by using get().
+    4. orElseGet(Takes supplier as its argument -> again, if a null is expected supplier will fetch you the object
+    without having the need to return null).
+    5. orElse(put any object to be return as its argument, if the object to be returned is not present it will fetch
+    the object from the argument itself, it means null pointer will never be thrown).
+    6. Safe-chaining -> What is safe-chaining?
+        As per what I understood, safe-chaining lets you map your optional return type object,
+        and if the value or the object is present then it will get you the mapped object otherwise which is the
+        argument put inside map() else if not present or is null, then its obvious that if the object is null what
+        will it get mapped to. Here we can chain it in one line itself via orElse method chained just next
+        to the map().
+        A small Example:
+                class Main{
+                    public static void main(String[] args){
+                        //Since our returnCatOptional() is not returning null, it will indeed map the result to or
+                        //change the return result to CatName, if not that is if found empty it will get you to
+                        //orELse part, which we have chained to in case if null pointer exception were to be countered.
+                        Optional<Cat> catFetched = returnCatOptional();
+                        //We are using unbound method reference -> unbound method reference waits for the instance
+                        //to return, which is therefore we were using .map on Optional.map because the object
+                        //was meant to return if it exists. Though knowing that Optional.of(ReturnType) will indeed
+                        //return us object, we tied it with map because first object will be return and then it would
+                        //be mapped to .map.
+                        //be mindful .map() takes supplier as its argument.
+                        System.out.println(catFetched.map(Cat::getCatName).orElse(orElseCat.getCatName()));
+                    }
+                }
+
+                /**
+                 * Also, it is used to check for object somewhere in an empty box right.
+                 * Means it's a collection, should we create a collection then.
+                 */
+                public static Optional<Cat> returnCatOptional(){
+                    Cat catObject = new Cat("Jimmy falon",3);
+                    return Optional.of(catObject);
+                }
+4. is part of java.util.Optional Class.
+
