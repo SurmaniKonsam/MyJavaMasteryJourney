@@ -26,11 +26,29 @@
                         //orELse part, which we have chained to in case if null pointer exception were to be countered.
                         Optional<Cat> catFetched = returnCatOptional();
                         //We are using unbound method reference -> unbound method reference waits for the instance
-                        //to return, which is therefore we were using .map on Optional.map because the object
+                        //to return, which is therefore we were using .map on Optional.map() because the object
                         //was meant to return if it exists. Though knowing that Optional.of(ReturnType) will indeed
-                        //return us object, we tied it with map because first object will be return and then it would
+                        //return us object, we tied it with map because first object will be return, and then it would
                         //be mapped to .map.
-                        //be mindful .map() takes supplier as its argument.
+                        //be mindful .map() takes Function as its argument.
+                        //And its quite implied to -> why would Map take Function functional interface as its argument.
+                        //Ans
+                        /*
+                            .map() is used to transform the value inside an Optional<T> to a new value U
+                            Also, function takes an argument performs an operation on it and then gives you a result.
+                            That's what function does, and so does the behaviour of Optional.map()
+                            And i also believe if you want to know what an optional stream would do, look at the
+                            behaviour of the stream.
+                            Just like .map it transforms the result, and so do Optional.map()
+                            Optional<String> name = Optional.of("Jarvis");
+
+                            Optional<Integer> length = name.map(s -> s.length());
+                            // OR with method reference:
+                            Optional<Integer> length = name.map(String::length); -> Return type eg
+                            Also, be mindful what the Optional.map() value has to offer if its return type is integer
+                            or any other data type put the return type up in the optional as well.
+                            Just like we did in -> Return type eg.
+                        */
                         System.out.println(catFetched.map(Cat::getCatName).orElse(orElseCat.getCatName()));
                     }
                 }
