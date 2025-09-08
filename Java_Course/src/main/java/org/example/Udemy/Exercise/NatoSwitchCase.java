@@ -5,6 +5,7 @@ public class NatoSwitchCase {
     public static void main(String[] args) {
         System.out.println(natoAlphabets('A'));
         System.out.println(yieldNatoAlphabets('B'));
+        printDayOfWeek(8);
     }
 
     public static String natoAlphabets(char character){
@@ -38,5 +39,28 @@ public class NatoSwitchCase {
                 yield "No Match Found";
             }
         };
+    }
+
+
+    /**
+     * exercise yield switch exercise
+     * Any methods which return a variable is called Expression.
+     */
+    public static String returnDayOfWeek(int day){
+        return switch (day){
+            case 0 -> {yield "Sunday";}
+            case 1 -> {yield "Monday";}
+            case 2 -> {yield "Tuesday";}
+            case 3 -> {yield "Wednesday";}
+            case 4 -> {yield "Thursday";}
+            case 5 -> {yield "Friday";}
+            case 6 -> {yield "Saturday";}
+            default -> {yield "Invalid Day";}
+        };
+    }
+
+    public static void printDayOfWeek(int day){
+        String dayOfTheWeek = returnDayOfWeek(day);
+        System.out.println("Day : "+day+" : "+dayOfTheWeek);
     }
 }
