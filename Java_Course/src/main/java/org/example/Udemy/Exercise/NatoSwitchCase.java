@@ -6,6 +6,8 @@ public class NatoSwitchCase {
         System.out.println(natoAlphabets('A'));
         System.out.println(yieldNatoAlphabets('B'));
         printDayOfWeek(8);
+        System.out.println(isLeapYear(104));
+//        System.out.println(getDaysInMonth(2,2020));
     }
 
     public static String natoAlphabets(char character){
@@ -63,4 +65,39 @@ public class NatoSwitchCase {
         String dayOfTheWeek = returnDayOfWeek(day);
         System.out.println("Day : "+day+" : "+dayOfTheWeek);
     }
-}
+
+    /**
+     * leap year method with yield
+     */
+    public static boolean isLeapYear(int year) {
+        if(year>1 && year<9999){
+            if(year%4 == 0) {
+                if(year % 100 == 0){
+                    if(year % 400 == 0){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                }return true;
+            }return false;
+        }
+        return false;
+    }
+
+
+    public static int getDaysInMonth(int month, int year) {
+        if ((month < 1 || month > 12 || year < 1 || year > 9999)) {
+            return -1;
+        } else if (year % 4 == 0 && year<100) {
+            return switch (month) {
+                case 1, 3, 5, 7, 8, 10, 12 -> {yield 31;}
+                case 2 -> {yield 29;}
+                default -> {yield 30;}
+            };
+        }return switch (month) {
+                case 1, 3, 5, 7, 8, 10, 12 -> {yield 31;}
+                case 2 -> {yield 28;}
+                default -> {yield 30;}
+            };
+        }
+    }
