@@ -72,8 +72,8 @@ public class NatoSwitchCase {
     public static boolean isLeapYear(int year) {
         if(year>1 && year<9999){
             if(year%4 == 0) {
-                if(year % 100 == 0){
-                    if(year % 400 == 0){
+                if(year % 100 == 0){//checking if it's a century year
+                    if(year % 400 == 0){//if it's a century year then it must be divisible by 400 as well
                         return true;
                     }else{
                         return false;
