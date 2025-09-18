@@ -11,8 +11,6 @@ public class NatoSwitchCase {
 //        System.out.println(isLeapYear(104));
 //        System.out.println(getDaysInMonth(2,2020));
 
-
-
         /**
          * calculating dollar interest incrementing by 0.25
          * another way of incrementing -> x = x+0.25 === x += 0.25
@@ -193,6 +191,7 @@ public class NatoSwitchCase {
         return counts;
     }
 }
+//September 18 changes made.
 
 
 
