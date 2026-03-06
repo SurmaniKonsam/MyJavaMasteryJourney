@@ -1,0 +1,7 @@
+Git Observation
+
+- If you push commit to the main branch -> it gets directly pushed.
+- If you create a branch, make changes on that branch, you will have a pull request as a branch owner to have it merge
+with the main branch.
+
+
