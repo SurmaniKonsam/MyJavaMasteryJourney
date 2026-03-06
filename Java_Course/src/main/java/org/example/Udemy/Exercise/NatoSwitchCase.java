@@ -67,6 +67,7 @@ public class NatoSwitchCase {
 
     /**
      * Yield way of returning value using switch
+     * yield means to return.
      */
     public static String yieldNatoAlphabets(char character){
         return switch (character){

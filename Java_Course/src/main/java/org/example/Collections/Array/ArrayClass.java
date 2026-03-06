@@ -1,4 +1,4 @@
-package main.java.org.example.Collections.Array;
+package org.example.Collections.Array;
 
 class Fruits{
     void fun(){

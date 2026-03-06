@@ -1,4 +1,4 @@
-package main.java.org.example.concepts;
+package org.example.concepts;
 
 public class StringConcepts {
     String myName = "Surmani konsam";

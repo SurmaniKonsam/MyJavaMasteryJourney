@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Java_Course/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/mockitoTest/mockitotest/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/SpringTraining/SpringBeanTest/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot overview/01-spring-boot-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot overview/03-spring-actuator-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot overview/05-spring-command-line-run/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot overview/04-spring-actuator-security-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot overview/06-spring-boot-application-properties/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/MockitoJunit/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/MockitoTestJUnit/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/01-Dependency-Injection-Demo/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/05-Dependency-Field-Injection/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/04-Dependency-Injection-Setter/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/06-Dependency-Injection-Qualifier/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/07-Use-Of-Primary-Lazy-Initialization/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/02-Dependency-Injection-Package-Segregated/pom.xml" />
+        <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/03-Dependency-Injection-Packages-out-of-main-package/pom.xml" />
+        <option value="$PROJECT_DIR$/DataStructureAndAlgorithms/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="homebrew-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
