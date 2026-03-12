@@ -19,6 +19,9 @@ public class Started {
      * args[0] = Hi, args[1] = I, args[2] = Am, args[3] = Backend, args[4] = Expert.
      * System.out.println(args[0]) = Hi
      * That's how String[] args works.
+     * And also, The JVM requires the exact method signature to identify the entry point of the program.
+     * Which is "public static void main(String[] args) -> without this the jvm won't run.
+     * Without these the jvm will say : Main method not found
      */
     public static void main(String[] args){
         System.out.println("what is the value inside : "+args[0]);

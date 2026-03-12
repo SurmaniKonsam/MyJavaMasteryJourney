@@ -1,0 +1,7 @@
+“Why does Java use String[] args in main?”
+- String[] args allows command-line arguments to be passed to a Java program when it starts.
+Usual flow : java className passTheValue
+Or
+Edit configuration -> program arguments
+These arguments can be used for configuration or input values. The JVM looks for the method
+signature public static void main(String[] args) as the entry point of a Java application.
