@@ -1,6 +1,4 @@
-package main.java.org.example.Udemy.Exercise;
-
-import java.security.spec.RSAOtherPrimeInfo;
+package org.example.TwentyLPAPackage;
 
 public class NatoSwitchCase {
 
@@ -48,6 +46,9 @@ public class NatoSwitchCase {
 
     }
 
+    /**
+     * Switch statement requires only constant value.
+     */
     public static String natoAlphabets(char character){
         switch (character){
             case 'A':
@@ -173,6 +174,8 @@ public class NatoSwitchCase {
         }
         return isPrime;
     }
+
+
 
     public static int countPrimeCounts(int startingRange,int maxRange){
         int counts = 0;

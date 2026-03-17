@@ -1,5 +1,7 @@
 package org.example.TwentyLPAPackage;
 
+import java.util.Scanner;
+
 //Date -> 13-03-2026
 public class Started {
     /**
@@ -25,5 +27,26 @@ public class Started {
      */
     public static void main(String[] args){
         System.out.println("what is the value inside : "+args[0]);
+        Scanner enterValue = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int number = enterValue.nextInt();
+        /**
+         * Switch case are used only for constant value with the switch block like
+         * switch(number or char){
+         * case 1:
+         * return or sout
+         * case 2:
+         * return or sout
+         * defaut:
+         * return or sout
+         * As you can see 1,2,3 etc are all constant.
+         */
+        switch (number){
+            case 2:
+                System.out.println("2");
+                return;
+            default:
+                System.out.println("Is Not 2");
+        }
     }
 }
