@@ -106,6 +106,7 @@ public class MaximumNumber {
             System.out.print(a+" ");
             int next = a + b; // 1 2
             a = b;
+            //algorithm -> "get next, slide forward, compute again"
             b = next; //[a,b] -> print first 'a' ->  move forward -> [b,next] : next is computed before.
         }
 
