@@ -175,7 +175,7 @@ public class MaximumNumber {
         //findMax(findMax);
 
         //printFibonacciUsingArray(9);
-        //printFibonacci(9);
-        printArmstrong(1634);
+        printFibonacci(9);
+        //printArmstrong(1634);
     }
 }
