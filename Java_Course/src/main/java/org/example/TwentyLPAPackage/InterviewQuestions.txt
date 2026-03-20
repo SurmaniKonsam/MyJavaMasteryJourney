@@ -5,3 +5,21 @@ Or
 Edit configuration -> program arguments
 These arguments can be used for configuration or input values. The JVM looks for the method
 signature public static void main(String[] args) as the entry point of a Java application.
+
+2. Fibonacci explanation?
+- The Fibonacci sequence is defined by:
+  F(n)=F(n−1)+F(n−2)
+  next = F(n)
+  Base case:
+  F(0) = 0
+  F(1) = 1
+  [0 1]/{base case} 1 2 3 5 8 13  21
+  How the window moves?
+  [0 1] 1 2 3 5 8 13 21 34 -> f(n) or current value = f(n-1) + f(n-2)
+  0 [1 1] 2 3 5 8 13 21 34 -> here we will be computing current value now.
+  0 1 [1 2] 3 5 8 13 21 34
+  0 1 1 [2 3] 5 8 13 21 34
+  0 1 1 2 [3 5] 8 13 21 34
+  0 1 1 2 3 [5 8] 13 21 34
+  0 1 1 2 3 5 [8 13] 21 34
+  0 1 1 2 3 5 8 [13 21] 34
