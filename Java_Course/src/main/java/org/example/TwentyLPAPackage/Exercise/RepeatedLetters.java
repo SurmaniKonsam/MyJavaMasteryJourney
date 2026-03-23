@@ -25,7 +25,7 @@ public class RepeatedLetters {
         int repeatCounts = 0;
         for(int i = 0;i< arr.length;i++){
             boolean catchDups = false;
-            for(int j = 0;j< arr.length;j++){
+            for(int j = 0;j< write;j++){
                 if(arr[i] == arr[j]){
                     catchDups = true;
                     repeatCounts++;
@@ -39,12 +39,12 @@ public class RepeatedLetters {
             }
         }
         for(int i = 0;i<write;i++){
-            System.out.print(arr[i]);
+            System.out.print(arr[i]+"|");
         }
     }
 
     static void repeatedLettersUsingArray() {
-        char[] intoCharArray = "Pppppprogrammiiiiiiing".toLowerCase().toCharArray();
+        char[] intoCharArray = "Ppprgriiammoooiiiipppioongaaooo".toLowerCase().toCharArray();
         ArrayList<String> arList = new ArrayList<>();
         for (int i = 0; i < intoCharArray.length; i++) {
             //Check if already processed
@@ -62,15 +62,14 @@ public class RepeatedLetters {
                     countRepetition++;
                 }
             }
-            arList.add(intoCharArray[i] + " : Repeated : " + countRepetition + " times | ");
+            arList.add(intoCharArray[i] + " : Repeated : " + countRepetition);
         }
-        arList.forEach(System.out::print);
+        arList.forEach(System.out::println);
     }
 
     public static void main(String[] args) {
-       repeatedLettersStreamVersion("Pppppprogrammiiiiiiing");
        //repeatedLettersUsingArray();
-        int[] arr = {1,1,1,2,3,3,4,5,5,7,8,9};
-        removeDuplicates(arr);
+       int[] arr = {1,1,1,2,4,5,5,1,1,1,1,8,9,0,0,333,2,2,2,2};
+       removeDuplicates(arr);
     }
 }

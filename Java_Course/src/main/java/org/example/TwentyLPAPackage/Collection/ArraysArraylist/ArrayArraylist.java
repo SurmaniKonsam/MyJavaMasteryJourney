@@ -1,4 +1,4 @@
-package org.example.TwentyLPAPackage.Collection;
+package org.example.TwentyLPAPackage.Collection.ArraysArraylist;
 
 import java.util.*;
 
@@ -124,6 +124,7 @@ public class ArrayArraylist {
     //swap using arraylist setter method.
     static void swapArraylist(ArrayList<Integer> arrList,int index1,int index2){
         int temp = arrList.get(index1);
+        //to have an existing index with updated value, use set
         arrList.set(index1,arrList.get(index2));
         arrList.set(index2,temp);
         for(int alist : arrList){
@@ -137,9 +138,7 @@ public class ArrayArraylist {
         for (Integer integer : arLst) {
             System.out.print(integer + "|");
         }
-
         System.out.println();
-
     }
 
     //adding elements in array and passing it to the list

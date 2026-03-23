@@ -1,6 +1,4 @@
-package org.example.TwentyLPAPackage.Collection;
-
-import java.util.Comparator;
+package org.example.TwentyLPAPackage.Collection.ComparatorComparable;
 
 
 public class Employee implements Comparable<Employee> {
