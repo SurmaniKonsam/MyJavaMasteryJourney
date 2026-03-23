@@ -121,6 +121,35 @@ public class ArrayArraylist {
         }
     }
 
+    //swap using arraylist setter method.
+    static void swapArraylist(ArrayList<Integer> arrList,int index1,int index2){
+        int temp = arrList.get(index1);
+        arrList.set(index1,arrList.get(index2));
+        arrList.set(index2,temp);
+        for(int alist : arrList){
+            System.out.print(alist+"|");
+        }
+    }
+
+    //20-03-2026/8:06PM
+    static void arrayListMethods(ArrayList<Integer> arLst){
+        //this is possible, because Arraylist have extended Iterable.
+        for (Integer integer : arLst) {
+            System.out.print(integer + "|");
+        }
+
+        System.out.println();
+
+    }
+
+    //adding elements in array and passing it to the list
+    static void listElements(String[] nms){
+        List<String> rd = Arrays.asList(nms);
+        for(String r : rd){
+            System.out.print(r+"|");
+        }
+    }
+
     //array 2d test
     public static void main(String[] args) {
         //int[][] array2d = new int[row][column];
@@ -139,7 +168,29 @@ public class ArrayArraylist {
         numbers.add(100);
         //printMaxArraylistTuts(numbers);
 
+        //Sorting
+        Collections.sort(numbers);
+
+        //print using iterator
+        arrayListMethods(numbers);
+
+        List<Integer> lst = Arrays.asList(1,2);
+        for(Integer it : lst){
+            System.out.print(it+"|");
+        }
+        System.out.println();
+
+        //asList demo
+        String[] fruits = {"Sir","Mam","Junior"};
+        listElements(fruits);
+        System.out.println();
+
+        List<Integer> bulkUpdate = List.of(1,2,3,4,5,6,7,8,9,10,11,12,13);
+        ArrayList<Integer> swapIntegers = new ArrayList<>(bulkUpdate);
+        swapArraylist(swapIntegers,0,11);
+
         int[] arr = {1,2,2,0,4,4,4,5,6,4,9,11,11,12};
+        //let's sort this out.
 
         System.out.println();
 
@@ -149,6 +200,25 @@ public class ArrayArraylist {
         System.out.println();
         //uniqueInPlaceArrayPointer(arr);
         System.out.println();
-        shiftZero(arr,11);
+        //shiftZero(arr,11);
+
+        //let's check the default size of ArrayList
+        ArrayList<Integer> defAList = new ArrayList<>();
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+
+        System.out.println(defAList.size());
     }
 }
