@@ -149,8 +149,55 @@ public class ArrayArraylist {
         }
     }
 
+    //jarvis approach
+    void frequencyLetters(String word) {
+        Map<Character, Integer> freq = new HashMap<>();
+
+        for (char ch : word.toLowerCase().toCharArray()) {
+            freq.put(ch, freq.getOrDefault(ch, 0) + 1);
+        }
+
+        for (Map.Entry<Character, Integer> entry : freq.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+    }
+
+
+    //Mine approach to repeated frequency words.
+
+    /**
+     * Few learnings to point out.
+     * Keep track of the incremented variable, make sure to reset it for next outer iteration, if not
+     * it will keep incrementing because of the nested loop.
+     * Learn Hashmap.
+     */
+    void repeatedLetters(String word){
+        char[] letters = word.toCharArray();
+        int countWordsRepeated;
+        List<String> repeated = new ArrayList<>();
+        for(int i = 0;i<letters.length;i++){
+            countWordsRepeated = 0;
+            if(!repeated.contains(String.valueOf(letters[i]))){
+                String cmp = String.valueOf(letters[i]).toLowerCase();
+                for(int j = i;j<letters.length;j++){
+                    if(cmp.equalsIgnoreCase(String.valueOf(letters[j]))) {
+                        countWordsRepeated++;
+                    }
+                }
+                repeated.add(cmp);
+                System.out.println(letters[i]+" : "+countWordsRepeated);
+            }
+        }
+    }
+
     //array 2d test
     public static void main(String[] args) {
+
+        //Repeated Letters
+        ArrayArraylist arrayArraylist = new ArrayArraylist();
+        //arrayArraylist.repeatedLetters("Apple");
+        arrayArraylist.frequencyLetters("Apple");
+
         //int[][] array2d = new int[row][column];
         int[][] arr2d = {
                 {1, 2, 2},
