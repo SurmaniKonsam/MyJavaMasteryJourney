@@ -1,4 +1,4 @@
-package org.example.TwentyLPAPackage.Collection.ComparatorComparable;
+package org.example.TwentyLPAPackage.Collection.ComparatorComparable.Comparator;
 
 public class ComparatorEmployee {
     int age;

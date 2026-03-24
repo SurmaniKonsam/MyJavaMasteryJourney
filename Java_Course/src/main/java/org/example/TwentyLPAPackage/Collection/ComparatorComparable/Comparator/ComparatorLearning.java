@@ -1,11 +1,8 @@
-package org.example.TwentyLPAPackage.Collection.ComparatorComparable;
+package org.example.TwentyLPAPackage.Collection.ComparatorComparable.Comparator;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
-public class ComparatorComparableLearning {
+public class ComparatorLearning {
     public static void main(String[] args) {
         List<Employee> employeeList = new ArrayList<>();
         employeeList.add(new Employee(12,"Sam",85000,3));
@@ -21,12 +18,17 @@ public class ComparatorComparableLearning {
             //System.out.println(e);
         }
 
+        //Sort Alphabetical order.
+        String[] fruits = {"Pineable","Banana","Kiwi","Grapes","Papaya"};
+        List<String> lst = Arrays.asList(fruits);
+        lst.sort(String::compareTo);
+        System.out.println(lst);
+
         //Using Comparator
         List<ComparatorEmployee> comparatorEmp = new ArrayList<>();
         comparatorEmp.add(new ComparatorEmployee(12,85000,"Sam",3));
         comparatorEmp.add(new ComparatorEmployee(12,85000,"Am",3));
         comparatorEmp.add(new ComparatorEmployee(12,85000,"Bm",3));
-
 
         //Using List comparator
         /*
@@ -60,9 +62,8 @@ public class ComparatorComparableLearning {
 
         //System.out.println(comparatorEmp);
         for(ComparatorEmployee e: comparatorEmp){
-            System.out.println(e);
+            //System.out.println(e);
         }
-
 
         //Arraylist of number
         ArrayList<Integer> arInt = new ArrayList<>();
@@ -72,8 +73,7 @@ public class ComparatorComparableLearning {
         arInt.add(19);
         arInt.add(99);
         Collections.sort(arInt);
-
-        arInt.stream().forEach(System.out::println);
+        //arInt.stream().forEach(System.out::println);
         /*Output
             1
             19
@@ -81,11 +81,6 @@ public class ComparatorComparableLearning {
             99
             819
          */
-
-
-
-
-
 
     }
 }

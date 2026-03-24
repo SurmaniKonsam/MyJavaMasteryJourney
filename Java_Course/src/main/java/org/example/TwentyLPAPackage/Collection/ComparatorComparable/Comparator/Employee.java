@@ -1,4 +1,4 @@
-package org.example.TwentyLPAPackage.Collection.ComparatorComparable;
+package org.example.TwentyLPAPackage.Collection.ComparatorComparable.Comparator;
 
 
 public class Employee implements Comparable<Employee> {
@@ -7,7 +7,7 @@ public class Employee implements Comparable<Employee> {
     int salary;
     int experience;
 
-    Employee(int age,String employeeName,int salary,int experience){
+    public Employee(int age, String employeeName, int salary, int experience){
         this.age = age;
         this.employeeName = employeeName;
         this.salary = salary;

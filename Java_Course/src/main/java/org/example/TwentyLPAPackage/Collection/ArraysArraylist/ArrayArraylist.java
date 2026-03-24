@@ -149,8 +149,9 @@ public class ArrayArraylist {
         }
     }
 
-    //jarvis approach
+    //jarvis approach using Map.
     void frequencyLetters(String word) {
+        //Until here it's clear.
         Map<Character, Integer> freq = new HashMap<>();
 
         for (char ch : word.toLowerCase().toCharArray()) {
