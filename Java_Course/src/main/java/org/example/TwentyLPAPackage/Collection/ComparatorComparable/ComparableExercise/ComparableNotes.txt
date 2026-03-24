@@ -1,0 +1,42 @@
+1. Integer.compare(T o1,T o2); or Integer.compare(a,b);
+- Used in between two objects, to be used primarily in compareTo method of Comparable Interface.
+- Returns:
+  -1 → if this.priority < tsk.priority
+  0 → if equal
+  +1 → if this.priority > tsk.priority
+- Equivalent Manual Logic
+  if (this.priority < tsk.priority) return -1;
+  if (this.priority > tsk.priority) return 1;
+  return 0;
+
+- If in reverse order, just change the argument order.
+   Integer.compare(T o2, T ); or Integer.compare(b,a);
+
+- More on "this":
+    When you write:
+
+    Collections.sort(tasks);
+
+    Internally it does something like:
+
+    t1.compareTo(t2);
+
+    👉 So:
+
+    this → t1 (current object)
+    tsk → t2 (object to compare against)
+    Meaning of compareTo
+    this.compareTo(tsk)
+
+    “Should this come before or after tsk?”
+
+    Interpretation of Return Value
+    Return	Meaning
+    < 0	this comes before tsk -> -1
+    > 0	this comes after tsk -> 1
+    0	both are equal in ordering -> ==
+
+Same goes for:
+2. Long.compare(this.deadline, tsk.deadline); //Returns -1,0,1.
+3. Double.compare(T o1,T o2);
+4. Integer.compare(this.priority,tsk.priority);

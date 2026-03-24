@@ -14,6 +14,11 @@ public class ComparableEmployee implements Comparable<ComparableEmployee>{
     }
 
     //compareTo will return either 0,-1,1
+
+    /**
+     * Only one method exist in Comparable Interface -> public int compareTo(T o);.
+     * That aon
+     */
     @Override
     public int compareTo(ComparableEmployee ce){
         return this.name.compareTo(ce.name);
