@@ -154,8 +154,14 @@ public class ArrayArraylist {
         //Until here it's clear.
         Map<Character, Integer> freq = new HashMap<>();
 
+        /**
+         * getOrDefault(key,defaultValue);
+         * Returns the value mapped to the key if present,
+         * otherwise returns the default value you provide.
+         */
         for (char ch : word.toLowerCase().toCharArray()) {
-            freq.put(ch, freq.getOrDefault(ch, 0) + 1);
+            freq.put(ch,
+                    freq.getOrDefault(ch, 0) + 1);
         }
 
         for (Map.Entry<Character, Integer> entry : freq.entrySet()) {
@@ -194,10 +200,12 @@ public class ArrayArraylist {
     //array 2d test
     public static void main(String[] args) {
 
+
+
         //Repeated Letters
         ArrayArraylist arrayArraylist = new ArrayArraylist();
         //arrayArraylist.repeatedLetters("Apple");
-        arrayArraylist.frequencyLetters("Apple");
+        arrayArraylist.frequencyLetters("Apppplllleeee");
 
         //int[][] array2d = new int[row][column];
         int[][] arr2d = {
@@ -223,20 +231,29 @@ public class ArrayArraylist {
 
         List<Integer> lst = Arrays.asList(1,2);
         for(Integer it : lst){
-            System.out.print(it+"|");
+            //System.out.print(it+"|");
         }
         System.out.println();
 
         //asList demo
         String[] fruits = {"Sir","Mam","Junior"};
         listElements(fruits);
-        System.out.println();
+        //System.out.println();
+        /**
+         * In order for you to convert array into list, the return type of the array must be wrapper class
+         * but not primitive type.
+         * That's why String[] str; worked earlier when converted into list
+         * but not int[] arr = {1,2};
+         */
+        Integer[] arr = {1,2,2,4};
+        //int[] arr2 = {1,2,2,4};
 
+
+        List<Integer> checkIntArr = Arrays.asList(arr);
         List<Integer> bulkUpdate = List.of(1,2,3,4,5,6,7,8,9,10,11,12,13);
         ArrayList<Integer> swapIntegers = new ArrayList<>(bulkUpdate);
         swapArraylist(swapIntegers,0,11);
 
-        int[] arr = {1,2,2,0,4,4,4,5,6,4,9,11,11,12};
         //let's sort this out.
 
         System.out.println();
@@ -266,6 +283,6 @@ public class ArrayArraylist {
         defAList.add(12);
         defAList.add(12);
 
-        System.out.println(defAList.size());
+        //System.out.println(defAList.size());
     }
 }
