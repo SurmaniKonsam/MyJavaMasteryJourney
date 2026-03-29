@@ -1,6 +1,8 @@
 package org.example.TwentyLPAPackage.Collection.HashMap;
 
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 class Person{
@@ -30,9 +32,10 @@ class Person{
      */
     @Override
     public boolean equals(Object obj) {
+        //this -> object to compare with.
         if(this == obj){
             return true;
-        }else if(obj == null){
+        }else if(!(obj instanceof Person)){
             return false;
         }
         Person pr = (Person) obj;
@@ -47,4 +50,10 @@ class Person{
 
 
 public class ObjectHashCodeStudy {
+    public static void main(String[] args) {
+        Person person = new Person("A",2);
+        Person person2 = new Person("A",2);
+        System.out.println(person.equals(person2));
+
+    }
 }
