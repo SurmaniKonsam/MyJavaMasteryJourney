@@ -27,5 +27,10 @@ public class ConcurrentHashMapPractice {
          */
         rdConcurrent.computeIfAbsent("Key",compute);
         System.out.println(rdConcurrent);
+
+        double avg = 123213;
+        double placeTwo = avg/100;
+        System.out.println(placeTwo);
+
     }
 }
