@@ -36,6 +36,10 @@ class Person{
         if(this == obj){
             return true;
         }else if(!(obj instanceof Person)){
+            /**
+             * Object instanceOf Person means:
+             * object belongs to the class or is a subclass or child of the class.
+             */
             return false;
         }
         Person pr = (Person) obj;

@@ -1,6 +1,7 @@
 package org.example.TwentyLPAPackage.Exercise;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -67,9 +68,31 @@ public class RepeatedLetters {
         arList.forEach(System.out::println);
     }
 
+    //jarvis approach using Map.
+    void frequencyLetters(String word) {
+        //Until here it's clear.
+        Map<Character, Integer> freq = new HashMap<>();
+        /**
+         * getOrDefault(key,defaultValue);
+         * Returns the value mapped to the key if present,
+         * otherwise returns the default value you provide.
+         */
+        for (char ch : word.toLowerCase().toCharArray()) {
+            freq.put(ch,
+                    freq.getOrDefault(ch, 0) + 1);
+        }
+
+        for (Map.Entry<Character, Integer> entry : freq.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+    }
+
     public static void main(String[] args) {
        //repeatedLettersUsingArray();
        int[] arr = {1,1,1,2,4,5,5,1,1,1,1,8,9,0,0,333,2,2,2,2};
        removeDuplicates(arr);
+       String name = "Appleeeinggssshhhssfxkklklklkasaaa";
+       RepeatedLetters repeatedLetters = new RepeatedLetters();
+       repeatedLetters.frequencyLetters(name);
     }
 }

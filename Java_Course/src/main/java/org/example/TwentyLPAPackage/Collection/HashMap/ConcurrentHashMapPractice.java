@@ -1,5 +1,6 @@
 package org.example.TwentyLPAPackage.Collection.HashMap;
 
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
@@ -12,6 +13,12 @@ public class ConcurrentHashMapPractice {
         rdConcurrent.put("G",22);
         rdConcurrent.put("A",25);
         rdConcurrent.put("Key",123);
+
+        System.out.println(rdConcurrent.getOrDefault("K",0)+1);
+
+        for(Map.Entry<String,Integer> rd: rdConcurrent.entrySet()){
+            System.out.println(rd.getKey()+" | "+rd.getValue());
+        }
 
 
         Function<String,Integer> compute = a -> {
@@ -26,11 +33,11 @@ public class ConcurrentHashMapPractice {
          * Thread safe -> Only one thread uses others wait and resuses it.
          */
         rdConcurrent.computeIfAbsent("Key",compute);
-        System.out.println(rdConcurrent);
+        //System.out.println(rdConcurrent);
 
         double avg = 123213;
         double placeTwo = avg/100;
-        System.out.println(placeTwo);
+        //System.out.println(placeTwo);
 
     }
 }

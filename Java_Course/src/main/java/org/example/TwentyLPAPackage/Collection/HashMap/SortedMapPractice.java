@@ -59,6 +59,16 @@ public class SortedMapPractice {
         //lst.forEach(System.out::println);
 
 
+        /**
+         * Used for sorting keys naturally.
+         */
+        SortedMap<String,Integer> srtMap = new TreeMap<>();
+        srtMap.put("C",12);
+        srtMap.put("A",122);
+        srtMap.put("B",123);
+        System.out.println(srtMap);
+
+
 
 
 

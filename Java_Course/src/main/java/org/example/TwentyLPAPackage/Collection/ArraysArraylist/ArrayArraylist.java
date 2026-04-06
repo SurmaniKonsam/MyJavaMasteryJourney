@@ -200,8 +200,6 @@ public class ArrayArraylist {
     //array 2d test
     public static void main(String[] args) {
 
-
-
         //Repeated Letters
         ArrayArraylist arrayArraylist = new ArrayArraylist();
         //arrayArraylist.repeatedLetters("Apple");

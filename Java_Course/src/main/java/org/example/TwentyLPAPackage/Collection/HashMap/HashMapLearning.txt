@@ -1,7 +1,7 @@
 Interview
 - What does HashMap.getOrDefault(key,defaultValue); does?
-    - Returns the value mapped to the key if present,
-      otherwise returns the default value you provide.
+    - Returns the value if key present, else gets you the default value specified.
+     mapped to the key if present, otherwise returns the default value you provide.
 
 - Eg:
     Map<String, Integer> map = new HashMap<>();

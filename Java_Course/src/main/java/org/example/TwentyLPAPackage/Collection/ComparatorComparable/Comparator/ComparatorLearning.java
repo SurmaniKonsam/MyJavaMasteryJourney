@@ -55,7 +55,7 @@ public class ComparatorLearning {
         //object reference must be given inside comparing bracks.
         //comparatorEmp.sort(Comparator.comparing((ComparatorEmployee ce) ->ce.experience));
 
-        comparatorEmp.sort(Comparator.comparing((ComparatorEmployee ce)-> ce.age)
+        comparatorEmp.sort(Comparator.comparingInt((ComparatorEmployee ce)-> ce.age)
                 .thenComparing(ce -> ce.experience)
                 .thenComparing(ce -> ce.salary)
                 .thenComparing(ce -> ce.name).reversed());
