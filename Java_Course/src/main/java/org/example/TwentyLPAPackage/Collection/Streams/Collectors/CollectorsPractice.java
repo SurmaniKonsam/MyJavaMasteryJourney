@@ -1,9 +1,6 @@
-package org.example.TwentyLPAPackage.Collection.Streams;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+package org.example.TwentyLPAPackage.Collection.Streams.Collectors;
 import java.text.DecimalFormat;
 import java.util.*;
-import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 

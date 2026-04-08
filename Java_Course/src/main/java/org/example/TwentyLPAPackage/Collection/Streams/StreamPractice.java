@@ -7,6 +7,37 @@ import java.util.stream.Stream;
 
 public class StreamPractice {
     public static void main(String[] args) {
+        List<String> revLst = getStrings();
+        revLst.sort(Comparator.reverseOrder());
+
+        //Squaring and sorting number
+        List<Integer> nmbers = List.of(11,4,3,2,12,99,1,1,1,0,2,32,3,3,3,3,11,4);
+        List<Integer> getNm = nmbers.stream().map(x -> x*x).toList();
+        for (Integer rd : getNm){
+            //System.out.println(rd);
+        }
+
+        //Sum -> List<Integer> nmbers = List.of(11,4,3,2,12,99,1,1,1,0,2,32,3,3,3,3,11,4);
+        int sum = nmbers.stream().reduce(0,(x,y)->x+y);
+        System.out.println("Sum : "+sum);
+
+        //or
+        int sumUsingIntegerMethodRef = nmbers.stream().reduce(Integer::sum).get();
+        System.out.println("Sum : "+sumUsingIntegerMethodRef);
+
+        //Find the largest String count
+        List<String> names = List.of("Strings","Rajesh","Schwarzenegger","SurmaniKonsam","Hilihlihlilhsfdimani");
+        Optional<String> getLargestString = names.stream().reduce((str1,str2)->
+            str1.length()>str2.length()?str1:str2
+        );
+
+        //Counting occurrence using stream.
+        String name = "Hello World"; //to count L occurance
+        System.out.println("l count : "+name.chars().filter(x->x=='l').count());
+
+    }
+
+    private static List<String> getStrings() {
         List<Integer> lst = new ArrayList<>();
         int i = 0;
         while(i<11){
@@ -49,47 +80,6 @@ public class StreamPractice {
          * Comparator.reverseOrder() -> is very useful.
          */
         List<String> revLst = Arrays.asList(dupChecks);
-        revLst.sort(Comparator.reverseOrder());
-
-
-        //Squaring and sorting number
-        List<Integer> nmbers = List.of(11,4,3,2,12,99,1,1,1,0,2,32,3,3,3,3,11,4);
-        List<Integer> getNm = nmbers.stream().map(x -> x*x).toList();
-        for (Integer rd : getNm){
-            //System.out.println(rd);
-        }
-
-
-        //Sum -> List<Integer> nmbers = List.of(11,4,3,2,12,99,1,1,1,0,2,32,3,3,3,3,11,4);
-        int sum = nmbers.stream().reduce(0,(x,y)->x+y);
-        System.out.println("Sum : "+sum);
-
-        //or
-        int sumUsingIntegerMethodRef = nmbers.stream().reduce(Integer::sum).get();
-        System.out.println("Sum : "+sumUsingIntegerMethodRef);
-
-        //Find the largest String count
-        List<String> names = List.of("Strings","Rajesh","Schwarzenegger","SurmaniKonsam","Hilihlihlilhsfdimani");
-        Optional<String> getLargestString = names.stream().reduce((str1,str2)->
-            str1.length()>str2.length()?str1:str2
-        );
-
-
-        //Counting occurrence using stream.
-        String name = "Hello World"; //to count L occurance
-        System.out.println("l count : "+name.chars().filter(x->x=='l').count());
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return revLst;
     }
 }
