@@ -1,4 +1,4 @@
-package main.java.org.example.exercise;
+package org.example.DailyDSAExercise;
 
 import java.util.List;
 

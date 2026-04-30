@@ -1,4 +1,4 @@
-package main.java.org.example.exercise;
+package org.example.DailyDSAExercise;
 
 public class PlayingCat {
     public static boolean isCatPlaying(boolean summer, int temperature){
