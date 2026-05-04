@@ -1,4 +1,4 @@
-package org.example.DailyDSAExercise.DSA;
+package org.example.DailyDSAExercise.DSA.TwoPointer;
 
 /**
  * Trapped water algorithm learnt.
