@@ -9,8 +9,9 @@ public class Exercise_16_04_2026 {
         for(int i = 0;i<arr.length;i++){
             boolean caughtDup = false;
             for(int j = 0;j<writeUnique;j++){
-                if(arr[i]==arr[j]){
+                if (arr[i] == arr[j]) {
                     caughtDup = true;
+                    break;
                 }
             }
             if(!caughtDup){

@@ -1,4 +1,4 @@
-package main.java.org.example.Collections.Comparator;
+package org.example.Collections.comparableComparator.Comparator;
 
 
 /**
@@ -42,7 +42,8 @@ class StringComparator implements Comparator<String>{
      */
     @Override
     public int compare(String s1,String s2){
-        return s2.length() - s1.length();
+        //s1.compareTo(s2); -> gets your string list in alphabetical order.
+        return s1.compareTo(s2);
     }
 }
 
@@ -59,14 +60,17 @@ public class ComparatorExample {
         List<String> stringList = new ArrayList<>();
         stringList.add("One");
         stringList.add("Eleven");
-        stringList.add("Oh");
+        stringList.add("Ob");
+        stringList.add("Oa");
+
+        stringList.sort(new StringComparator());
 
         /**
          * Using lambda expression let's sort stringList again.
          */
-        stringList.sort((s1,s2) -> {
-            return s2.length() - s1.length();
-        });
+//        stringList.sort((s1,s2) -> {
+//            return s2.length() - s1.length();
+//        });
         System.out.println(stringList);
 
     }
