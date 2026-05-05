@@ -1,4 +1,4 @@
-package main.java.org.example.Collections.Comparator;
+package org.example.Collections.Comparator;
 
 
 /**
@@ -6,9 +6,9 @@ package main.java.org.example.Collections.Comparator;
  * Iterable -> Collections -> List -> ArrayList + Stack + Vector + Queue
  */
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 class Compare implements Comparator<Integer> {
 
@@ -54,6 +54,19 @@ public class ComparatorExample {
         listOfNumber.add(4);
         listOfNumber.add(30);
         listOfNumber.sort(new Compare());
+
+        //listOfNumber.sort(Comparator.comparingInt((Integer a)->a).reversed());
+        //listOfNumber.sort((Integer a,Integer b)->a-b);
+        //Collections.sort(listOfNumber,(Integer a,Integer b)->b-a);
+        Stream<Integer> getNmb = listOfNumber.stream().filter(x->x%3==0)
+                .map((x)->x*2).toList().stream();
+        System.out.println(getNmb.toList());
+        /**
+         * if(getNumb.isPresent()){} -> short lambda version -> getNmb.ifPresent(System.out::println);
+         */
+        //getNmb.ifPresent(System.out::println);
+
+
         System.out.println(listOfNumber);
 
         List<String> stringList = new ArrayList<>();
@@ -61,13 +74,19 @@ public class ComparatorExample {
         stringList.add("Eleven");
         stringList.add("Oh");
 
+        stringList.sort(Comparator.reverseOrder());
+        //System.out.println(stringList);
+
         /**
          * Using lambda expression let's sort stringList again.
          */
+        /*
         stringList.sort((s1,s2) -> {
             return s2.length() - s1.length();
         });
         System.out.println(stringList);
+
+         */
 
     }
 }
