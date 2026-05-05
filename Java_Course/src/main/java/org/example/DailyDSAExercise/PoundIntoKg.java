@@ -1,4 +1,4 @@
-package main.java.org.example.exercise;
+package org.example.DailyDSAExercise;
 
 public class PoundIntoKg {
     public double poundIntoKgConversion(double pound){

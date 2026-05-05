@@ -1,4 +1,4 @@
-package main.java.org.example.exercise;
+package org.example.DailyDSAExercise;
 
 public class AllThreeNumbersEqualCheck {
     public static void printEqual(int a,int b,int c){

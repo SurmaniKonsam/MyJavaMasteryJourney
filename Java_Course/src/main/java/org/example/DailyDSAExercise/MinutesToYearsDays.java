@@ -1,4 +1,4 @@
-package main.java.org.example.exercise;
+package org.example.DailyDSAExercise;
 
 public class MinutesToYearsDays {
     public static void printYearsAndDays(long minutes){
