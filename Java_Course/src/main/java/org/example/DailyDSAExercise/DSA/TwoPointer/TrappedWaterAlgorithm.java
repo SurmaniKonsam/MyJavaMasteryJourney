@@ -72,9 +72,115 @@ public class TrappedWaterAlgorithm {
         System.out.println("maximum water trapped : "+waterTrapped);
     }
 
+    //again tapped water question
+    static void getMaxTappedWater(int ...arr){
+        int left = 0;
+        int right = arr.length-1;
+        int leftMax = 0;
+        int rightMax = 0;
+        int trappedWater = 0;
+        while(left<right){
+            if(arr[left]<arr[right]){
+                if(arr[left]>leftMax){
+                    leftMax = arr[left];//current highest ceiling, water will spill.
+                }else{
+                    trappedWater = trappedWater+leftMax-arr[left];
+                    left++;
+                }
+            }
+            else{
+                if(arr[right]>rightMax){
+                    rightMax = arr[right];
+                }else{
+                    trappedWater = trappedWater + rightMax-arr[right];
+                    right--;
+                }
+            }
+        }
+
+        System.out.println("Max trapped water : "+trappedWater);
+    }
+
+    //container with most water
+    static int maxWater(int ...arr){
+        int left = 0;
+        int right = arr.length - 1;
+
+        int maxArea = 0;
+
+        while (left < right) {
+            int width = right - left;
+            int height = Math.min(arr[left], arr[right]);
+
+            int area = width * height;
+            maxArea = Math.max(maxArea, area);
+
+            // move smaller side
+            if (arr[left] < arr[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return maxArea;
+    }
+
+    //calculate max water holding in an elevation.
+    static int maxWaterContainer(int ...arr){
+        int left = 0;
+        int right = arr.length-1;
+        int maxWater = 0;
+        /**
+         * The logic here, is not about what is the unit of the water
+         * an elevation can hold like in the trapped water concept.
+         * In maxWaterHolding capacity, we are actively looking across
+         * the elevations, whether from the starting elevation till
+         * the end elevation what is the maximum water that the
+         * elevations can hold. It is done so via using the
+         * area formula for a rectangle.
+         * The concept hides itself with rectangle, because the water
+         * spills from the smaller wall, the smaller wall until the
+         * point touched to the outer wall will get you a straight
+         * line or width determined via x-y axis.
+         * i.e, int width = right-left;
+         * And min height between the two elevation will get you
+         * the max water content hold, determined by the min height
+         * boundary.
+         * Hence, the area will get you the maximum water that a two
+         * elevation can hold.
+         * int area = Math.min(arr[left],arr[right])*width;
+         * The pointers -> left and right, will keep moving until
+         * met, and with each iteration they will get you the maxWater
+         * content, out of all the iteration, if inside math function,
+         * Math.max(max,calculatedWater); none is greater than the
+         * max content, then it will return you the max water hold
+         * between two elevations or two indices.
+         */
+        while(left<right){
+            int width = right - left;
+            int height = Math.min(arr[left],arr[right]);
+            int area = width * height;
+            maxWater = Math.max(maxWater,area);
+            if(arr[left]<arr[right]){
+                left++;
+            }else{
+                right--;
+            }
+        }
+
+        return maxWater;
+    }
+
     public static void main(String[] args) {
-        int[] elevations = {0,0,1,2,3,6,9,0,1,5};
-        printMaxTrappedWater(elevations);
+        int[] elevations = {1,8,6,2,5,4,8,3,7};
+        //printMaxTrappedWater(elevations);
+        int[] waterElevation = {1,8,6,2,5,4,8,3,7};
+        //getMaxTappedWater(waterElevation);
+        //System.out.println(maxWater(waterElevation));
+
+        //System.out.println(Math.max(9,1232));
+        System.out.println("max water hold : "+maxWaterContainer(waterElevation));
 
     }
 }
