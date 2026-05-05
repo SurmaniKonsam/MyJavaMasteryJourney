@@ -1,4 +1,4 @@
-package org.example.TwentyLPAPackage.Collection;
+package org.example.TwentyLPAPackage.Collection.ArraysArraylist;
 
 import java.util.*;
 
@@ -121,8 +121,90 @@ public class ArrayArraylist {
         }
     }
 
+    //swap using arraylist setter method.
+    static void swapArraylist(ArrayList<Integer> arrList,int index1,int index2){
+        int temp = arrList.get(index1);
+        //to have an existing index with updated value, use set
+        arrList.set(index1,arrList.get(index2));
+        arrList.set(index2,temp);
+        for(int alist : arrList){
+            System.out.print(alist+"|");
+        }
+    }
+
+    //20-03-2026/8:06PM
+    static void arrayListMethods(ArrayList<Integer> arLst){
+        //this is possible, because Arraylist have extended Iterable.
+        for (Integer integer : arLst) {
+            System.out.print(integer + "|");
+        }
+        System.out.println();
+    }
+
+    //adding elements in array and passing it to the list
+    static void listElements(String[] nms){
+        List<String> rd = Arrays.asList(nms);
+        for(String r : rd){
+            System.out.print(r+"|");
+        }
+    }
+
+    //jarvis approach using Map.
+    void frequencyLetters(String word) {
+        //Until here it's clear.
+        Map<Character, Integer> freq = new HashMap<>();
+
+        /**
+         * getOrDefault(key,defaultValue);
+         * Returns the value mapped to the key if present,
+         * otherwise returns the default value you provide.
+         */
+        for (char ch : word.toLowerCase().toCharArray()) {
+            freq.put(ch,
+                    freq.getOrDefault(ch, 0) + 1);
+        }
+
+        for (Map.Entry<Character, Integer> entry : freq.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+    }
+
+
+    //Mine approach to repeated frequency words.
+
+    /**
+     * Few learnings to point out.
+     * Keep track of the incremented variable, make sure to reset it for next outer iteration, if not
+     * it will keep incrementing because of the nested loop.
+     * Learn Hashmap.
+     */
+    void repeatedLetters(String word){
+        char[] letters = word.toCharArray();
+        int countWordsRepeated;
+        List<String> repeated = new ArrayList<>();
+        for(int i = 0;i<letters.length;i++){
+            countWordsRepeated = 0;
+            if(!repeated.contains(String.valueOf(letters[i]))){
+                String cmp = String.valueOf(letters[i]).toLowerCase();
+                for(int j = i;j<letters.length;j++){
+                    if(cmp.equalsIgnoreCase(String.valueOf(letters[j]))) {
+                        countWordsRepeated++;
+                    }
+                }
+                repeated.add(cmp);
+                System.out.println(letters[i]+" : "+countWordsRepeated);
+            }
+        }
+    }
+
     //array 2d test
     public static void main(String[] args) {
+
+        //Repeated Letters
+        ArrayArraylist arrayArraylist = new ArrayArraylist();
+        //arrayArraylist.repeatedLetters("Apple");
+        arrayArraylist.frequencyLetters("Apppplllleeee");
+
         //int[][] array2d = new int[row][column];
         int[][] arr2d = {
                 {1, 2, 2},
@@ -139,7 +221,38 @@ public class ArrayArraylist {
         numbers.add(100);
         //printMaxArraylistTuts(numbers);
 
-        int[] arr = {1,2,2,0,4,4,4,5,6,4,9,11,11,12};
+        //Sorting
+        Collections.sort(numbers);
+
+        //print using iterator
+        arrayListMethods(numbers);
+
+        List<Integer> lst = Arrays.asList(1,2);
+        for(Integer it : lst){
+            //System.out.print(it+"|");
+        }
+        System.out.println();
+
+        //asList demo
+        String[] fruits = {"Sir","Mam","Junior"};
+        listElements(fruits);
+        //System.out.println();
+        /**
+         * In order for you to convert array into list, the return type of the array must be wrapper class
+         * but not primitive type.
+         * That's why String[] str; worked earlier when converted into list
+         * but not int[] arr = {1,2};
+         */
+        Integer[] arr = {1,2,2,4};
+        //int[] arr2 = {1,2,2,4};
+
+
+        List<Integer> checkIntArr = Arrays.asList(arr);
+        List<Integer> bulkUpdate = List.of(1,2,3,4,5,6,7,8,9,10,11,12,13);
+        ArrayList<Integer> swapIntegers = new ArrayList<>(bulkUpdate);
+        swapArraylist(swapIntegers,0,11);
+
+        //let's sort this out.
 
         System.out.println();
 
@@ -149,6 +262,25 @@ public class ArrayArraylist {
         System.out.println();
         //uniqueInPlaceArrayPointer(arr);
         System.out.println();
-        shiftZero(arr,11);
+        //shiftZero(arr,11);
+
+        //let's check the default size of ArrayList
+        ArrayList<Integer> defAList = new ArrayList<>();
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+        defAList.add(12);
+
+        //System.out.println(defAList.size());
     }
 }
