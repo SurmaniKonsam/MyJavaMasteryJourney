@@ -1,5 +1,6 @@
 package org.example.DailyDSAExercise.DSA.TwoPointer;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class DuplicateArray {
@@ -35,7 +36,7 @@ public class DuplicateArray {
                  *  from j = 0; till j = 1.
                  *  at the first index j = 0; it will compare with i = 1; value.
                  *  And since it's true, it will write uniqueElements = false, and will not write uniqueArray elements.
-                 * 
+                 *
                  *
                  */
 
@@ -55,10 +56,49 @@ public class DuplicateArray {
         }
     }
 
+    //write unique element using two pointer theory
+    static void writeUniqueElement(int ...arr){
+        int write = 1; //because the comparison shall be done from the second index.
+
+        for(int read = 1;read<arr.length;read++){
+            if(arr[read]!=arr[read-1]){
+                arr[write] = arr[read];
+                write++;
+            }
+        }
+
+        for(int rd : arr){
+            System.out.print(rd+" ");
+        }
+    }
+
+    /*
+    Fast-slow, read-write
+    One moves through entire array normally.
+    One moves only with condition.
+     */
+    static void readWriteUniqueArray(int ...arr){
+        int write = 1;
+        int read = 1;
+        while(read<arr.length){
+            if(arr[read]!=arr[read-1]){
+                arr[write] = arr[read];
+                write++;
+            }
+            System.out.println("read : "+read);
+            read++;
+        }
+
+        Arrays.stream(arr).forEach(x-> System.out.print(x+" "));
+    }
+
+
+    //can't I design my own using two pointer only.
+    //Since its sorted, either way its going from the left side only.
+
 
     static int returnUniqueElements(int ...arr){
         if(arr.length==0) return 0;
-
         int write = 1;
 
         for(int read = 1;read<arr.length;read++){
@@ -78,9 +118,15 @@ public class DuplicateArray {
 
         return write;
     }
+
+
     public static void main(String[] args) {
-        int[] arr = {1,1,1,1,1,1, 2, 2, 3,4,5,6,7,7,7};
+        int[] arr = {1,1,2,2,3,4};
         //System.out.println(returnUniqueElements(arr));
-        generateUniqueElementsArrayUnsorted(arr);
+        //generateUniqueElementsArrayUnsorted(arr);
+        //generateUniqueElementsArrayUnsorted(arr);
+        //writeUniqueElement(arr);
+        int[] rdWrite = {1,1,1,2,2,3,3,4};
+        readWriteUniqueArray(rdWrite);
     }
 }
