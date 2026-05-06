@@ -73,9 +73,9 @@ public class DuplicateArray {
     }
 
     /*
-    Fast-slow, read-write
+    Fast-slow, read-write. A form of sliding window.
     One moves through entire array normally.
-    One moves only with condition.
+    Other moves to write, only if fulfilled condition.
      */
     static void readWriteUniqueArray(int ...arr){
         int write = 1;
