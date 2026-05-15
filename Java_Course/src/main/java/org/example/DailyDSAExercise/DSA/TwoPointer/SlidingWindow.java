@@ -3,6 +3,7 @@ package org.example.DailyDSAExercise.DSA.TwoPointer;
 public class SlidingWindow {
 
     //get minimum length of the sub-array, whose sum is equal to the target.
+    //dynamic window
     static int returnTheShortestLength(int target,int ...arr){
         int left = 0;
         int sum = 0;
@@ -21,6 +22,7 @@ public class SlidingWindow {
     }
 
     //return the maximum length
+    //dynamic window
     static int returnTheLargestLength(int target,int ...arr){
         int left = 0;
         int right = 0;
@@ -69,6 +71,9 @@ public class SlidingWindow {
         }
         return maxLength;
     }
+
+    //fixed window
+
 
 
 

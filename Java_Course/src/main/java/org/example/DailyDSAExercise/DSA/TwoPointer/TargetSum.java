@@ -93,7 +93,6 @@ public class TargetSum {
 
     //documenting jarvis method
     static void targetSumGetIndex(int target,int ...arr){
-
         /**
          * if it does have elements inside it, then we must check for two things.
          * target, targetElement, what are we trying to find?

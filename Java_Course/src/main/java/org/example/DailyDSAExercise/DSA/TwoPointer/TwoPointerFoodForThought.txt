@@ -1,0 +1,7 @@
+Two Pointer Theory
+- When you start solving about two pointer theory, always start with if how the pointers will move.
+- Two pointers are there : left + right.
+- Converging, left moves from the '0' index, and right moves from the last index => right = arr.length-1;
+    - The movement is based on the conditions that we will be providing
+    - Conditions are usually meant for moving or getting the desired result that we desired. Usually its recommended
+    not to have the final result process in the repairing phase.
