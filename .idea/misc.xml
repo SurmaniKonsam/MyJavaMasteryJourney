@@ -22,7 +22,13 @@
         <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/02-Dependency-Injection-Package-Segregated/pom.xml" />
         <option value="$PROJECT_DIR$/IdeaProjects/Spring boot projects/Spring boot dependency injection and ioc/03-Dependency-Injection-Packages-out-of-main-package/pom.xml" />
         <option value="$PROJECT_DIR$/DataStructureAndAlgorithms/pom.xml" />
+        <option value="$PROJECT_DIR$/Java_Architect/src/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/DataStructureAndAlgorithms/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="homebrew-21" project-jdk-type="JavaSDK">

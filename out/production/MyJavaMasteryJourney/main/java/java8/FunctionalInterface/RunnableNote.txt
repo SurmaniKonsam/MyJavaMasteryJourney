@@ -1,0 +1,76 @@
+***Runnable Functional Interface*****
+1. Have abstract method return type void named : run.
+2. Runnable is a functional interface means need to have its method implemented.
+3. Can be implemented via lambda expression.
+4. Or we can get it implemented in the Class implementing the Runnable.
+5. Thread takes runnable object reference.
+6. Thread executes the runnable abstract method via invoking start.
+
+So,
+1. what is the use of Runnable Interface?
+2. Why Thread requires runnable as an argument or why does it have a parameter or runnable type?
+3. What can Thread and runnable really do?
+4. Why do they work together?
+
+*****Answer*****
+1. Thread does not know what code to execute by itself. It needs a "job" to perform — and that job is
+   described by the Runnable object.
+
+2. Runnable -> Describes what to do
+   Thread -> Manages how to do it (in parallel/concurrently/asynchronously)
+   Thread -> Run a separate task concurrently (asynchronously) alongside the main task (Our  main method task).
+
+   Runnable -> Holds business logic
+   Thread -> Allocates CPU time for execution
+
+   Runnable -> Can be executed via many mechanisms
+   Thread -> Is one specific execution mechanism.
+   When you invoke Thread.start(), it triggers the run() method of the passed Runnable.
+
+3. Since the main thread and the Runnable will run in parallel ->
+   Output order is not guaranteed, because both threads run asynchronously and possibly in parallel.
+
+4. Thread because is a thread which lets task run in parallel.So, we need a task in hand to let it work in parallel with
+    the main thread which therefore is given to the thread by Runnable, which have task run method to let thread
+    run in parallel with the main thread.
+
+5. Since they are running parallel in asynchronously the execution time of the main thread and the runnable thread will
+    differ.
+
+6. My analogy:
+    thread is like a sage mode for Naruto when he fights with Sasuke in kyubi mode, the sage mode in
+    background or asynchronously is collecting natures chakra in our scenario using run method parallel
+    the time when to hit back depending on which task will finish first, naruto will get its sage mode collected
+    and knock off Sasuke.
+
+
+7. We can wrap/adapt to a custom functional interface to the Runnable reference.
+    Why is it required?
+    -> The reason is that Thread was designed to accept only the Runnable interface — it's a strict type contract.
+    Thread takes runnable as its parameter, it means it would
+    only and only take a reference type of Runnable.
+    -> Now, question "Can we run a task defined using our own custom functional interface in parallel with the main
+    thread".We can but thread only takes Runnable as its parameter, then
+    how to do it, what's the solution?
+    we must adapt our custom interface into a Runnable instance using a lambda or method reference, how?
+    *****Code*****
+    @FunctionalInterface
+    interface CustomFunctionalInterface{
+        void myWayOfLife();
+    }
+
+    class Main{
+        public static void main(String[] args){
+            CustomFunctionalInterface customFunctionalInterface = () -> System.out.println("Kanna hotnou koh Surmani!!!");
+            /**
+                This is how we adapt custom functional interface to Runnable
+            **/
+            Runnable runnable = () -> customFunctionalInterface.myWayOfLife();
+            //Or
+            Runnable runnable2 = () -> customFunctionalInterface::myWayOfLife();
+
+            Thread thread = new Thread(runnable);
+            thread.start();
+        }
+    }
+

@@ -9,26 +9,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DependencyInjectionDemo (3)" />
-        <module name="DependencyInjectionDemo (4)" />
-        <module name="DependencyInjectionDemo (1)" />
-        <module name="DependencyInjectionDemo (2)" />
-        <module name="MockitoTestJUnit" />
-        <module name="DependencyInjectionDemo" />
-        <module name="DependencyInjectionDemo (5)" />
-        <module name="DependencyInjectionDemo (6)" />
-        <module name="FirstMacSpringBoot (4)" />
-        <module name="FirstMacSpringBoot (1)" />
-        <module name="FirstMacSpringBoot" />
-        <module name="FirstMacSpringBoot (3)" />
-        <module name="FirstMacSpringBoot (2)" />
-        <module name="MockitoJunit" />
-        <module name="mockitotest" />
         <module name="Java_Course" />
-        <module name="DataStructureAndAlgorithms" />
-        <module name="SpringFrameWorkPractice" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DataStructureAndAlgorithms" target="20" />
+      <module name="DependencyInjectionDemo" target="20" />
+      <module name="DependencyInjectionDemo (1)" target="20" />
+      <module name="DependencyInjectionDemo (2)" target="20" />
+      <module name="DependencyInjectionDemo (3)" target="20" />
+      <module name="DependencyInjectionDemo (4)" target="20" />
+      <module name="DependencyInjectionDemo (5)" target="20" />
+      <module name="DependencyInjectionDemo (6)" target="20" />
+      <module name="FirstMacSpringBoot" target="17" />
+      <module name="FirstMacSpringBoot (1)" target="20" />
+      <module name="FirstMacSpringBoot (2)" target="20" />
+      <module name="FirstMacSpringBoot (3)" target="20" />
+      <module name="FirstMacSpringBoot (4)" target="20" />
+      <module name="MockitoJunit" target="20" />
+      <module name="mockitotest" target="17" />
+      <module name="MockitoTestJUnit" target="1.8" />
+      <module name="SpringFrameWorkPractice" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

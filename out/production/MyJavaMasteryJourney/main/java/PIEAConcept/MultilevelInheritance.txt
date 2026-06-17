@@ -1,0 +1,34 @@
+1. A parent class reference can point to a child class object,
+and it can invoke only the methods defined in the parent class —
+unless overridden in the child.
+It cannot call methods unique to the child without explicit casting.
+
+Eg:
+class Fruits{
+    void eat(){
+        System.out.println("Have fun while eating"
+    }
+}
+
+class Apple extend Fruits{
+    void eat(){
+        System.out.println("Apple tastes great while eating");
+    }
+
+    void taste(){
+        System.out.println("Apple tastes awesome when eaten");
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        Fruits fruits = new Fruits();
+        fruits.eat(); //its allowed -> but
+        Fruits fruits = new Apple();
+        fruits.taste(); //is not allowed, even though parent class can reference the child class, it cannot point to
+                        //the unique method of child class to the parent class.
+
+    }
+}
+
+//Why is that why can't parent class refer to the unique attributes to it?
