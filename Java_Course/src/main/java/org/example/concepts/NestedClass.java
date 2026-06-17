@@ -2,17 +2,31 @@ package org.example.concepts;
 
 public class NestedClass {
 
-    class NestedOne{
+    private int variableToAssign;
+
+    class AssignVariable{
+        void setVariableValue(int a){
+            variableToAssign = a;
+        }
+
+        int getValue(){
+            return variableToAssign;
+        }
+    }
+
+    static class NestedOne{
         void show(){
             System.out.println("I am nested method return type void of the nested class NestedOne");
         }
 
-        class NestedClassInsideOne{
+        static class NestedClassInsideOne{
             void nestedInsideOneMethod(){
                 System.out.println("I am nested inside class NestedOne belonging to NestedClassInsideOne");
             }
         }
     }
+
+
 
     //static class
     static class StaticClassMember{
@@ -29,24 +43,31 @@ public class NestedClass {
 
 
     public static void main(String[] args) {
+
+        NestedClass nestedClass = new NestedClass();
+        AssignVariable assignVariable = nestedClass.new AssignVariable();
+        assignVariable.setVariableValue(423);
+        System.out.println(assignVariable.getValue());
+        /*
         StaticClassMember.staticMethod();
 
         //Invoking method of nestedOne class.
-        NestedClass.NestedOne nestedOneReference = new NestedClass().new NestedOne();
+        NestedClass.NestedOne nestedOneReference = new NestedOne();
         nestedOneReference.show();
 
         //Invoking nested class inside nestedOne class.
-        NestedClass.NestedOne.NestedClassInsideOne referenceToInnerClass = new NestedClass().new NestedOne().new NestedClassInsideOne();
+        NestedClass.NestedOne.NestedClassInsideOne referenceToInnerClass = new NestedOne.NestedClassInsideOne();
         referenceToInnerClass.nestedInsideOneMethod();
 
         //invoking nested static class.
         NestedClass.StaticClassMember.staticMethod();
 
         //invoking non-static class method inside static class.
-        StaticClassMember staticNestedClassInstance = new StaticClassMember();
         //we are then creating instance of the non-static nested class from the instance of the static class.
         StaticClassMember.NonStaticClassInsideStaticClass nonStaticClassRef = new StaticClassMember.NonStaticClassInsideStaticClass();
         nonStaticClassRef.nonStaticClassShow();
+
+         */
 
     }
 }
