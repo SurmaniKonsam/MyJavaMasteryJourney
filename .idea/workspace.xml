@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8c88442e-cf89-4827-ae3f-83ee0f8b645c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MyJavaMasteryJourney.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_Course/Java_Course.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_Course/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java_Course/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_Course/src/main/java/org/example/concepts/NestedClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java_Course/src/main/java/org/example/concepts/NestedClass.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar:///Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Comparable.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home/lib/src.zip!/java.base/java/math/RoundingMode.java" root0="SKIP_INSPECTION" />
+    <setting file="jar:///Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Comparator.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="34WqU96wGUNPWKHmOEkDFU8ftxr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.APIPractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AllThreeNumbersEqualCheck.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayArraylist.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ArrayClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Bank.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Car.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CarController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CarStartManual.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Cat.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ChainedException.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CollectorExercises.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CollectorsPractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ComparableEx.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ComparableLearning.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ComparablePractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ComparatorComparableLearning.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ComparatorCompare.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ComparatorExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ComparatorExercise.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ConcurrentHashMapPractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ConstructExercise.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ConstructorChaining.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CustomerPaymentChoice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DuplicateArray.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EmployeeImplementsComparator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Encapsulation.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EncapsulationCar.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExceptionRough.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ExerciseDuplicates.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Exercise_16_04_2026.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FibonacciSeriesTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FileReading.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FinalVariableViaConstructor.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FindMaxNumber.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FlatMapPractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FrequencyQuestion.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FrequencyWord.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HashMapExercise.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HierarchyException.executor&quot;: &quot;Run&quot;,
+    &quot;Application.JarvisNestedCarClassApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LRUPractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LinkedHashMapConcept.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainNestedClassExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MaximumNumber.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MaximumSubArraySize.executor&quot;: &quot;Run&quot;,
+    &quot;Application.NestedClass (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.NestedClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Node.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ObjectHashCodeStudy.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OptionalTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Palindrome.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ParentChild.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ParentException.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RandomException.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RepeatedLetters.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Rough.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SlidingWindow.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SortedMapPractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Started.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StreamPractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StudentCity.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SynchronizedMap.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TargetSum.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ThreadPractice.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ToStringConcept.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TrappedWaterAlgorithm.executor&quot;: &quot;Run&quot;,
+    &quot;Application.com.example.demo.DemoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.concepts.NestedClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.concepts.NestedClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.java.concepts.NestedClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.java.org.example.concepts.NestedClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.Collections.Array.ArrayClass.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.Collections.comparableComparator.Comparator.ComparatorExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.org.example.concepts.NestedClass.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in Java_Course.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Java_Course [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Java_Course [install].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PolymorphismMastery&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/surmanikonsam/Desktop/MyJavaMasteryJourney&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Java_Architect" />
+      <recent name="$PROJECT_DIR$/Java_Architect/src/main/java/org/example" />
+      <recent name="$PROJECT_DIR$/Java_Architect/src" />
+      <recent name="$PROJECT_DIR$/Java_Course/src/main/java/org/example/DailyDSAExercise/DSA" />
+      <recent name="$PROJECT_DIR$/Java_Course/src/main/java/org/example/TwentyLPAPackage/Collection/Streams" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.java" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c88442e-cf89-4827-ae3f-83ee0f8b645c" name="Changes" comment="" />
+      <created>1761339689272</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761339689272</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

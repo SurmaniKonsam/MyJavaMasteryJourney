@@ -1,6 +1,6 @@
 package org.example.concepts;
 
-public class StaticBlocl {
+public class StaticBlock {
 
     static {
         System.out.println("Do i need a main method");
