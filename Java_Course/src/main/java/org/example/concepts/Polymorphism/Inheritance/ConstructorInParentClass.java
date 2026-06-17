@@ -1,11 +1,11 @@
-package main.java.org.example.concepts.Polymorphism;
+package org.example.concepts.Polymorphism.Inheritance;
 
 public class ConstructorInParentClass {
 
-    private int age,salary;
-    private double yearsOfExperience;
-    private String nameOfTheEmployee;
-    private String designation;
+    int age,salary;
+    double yearsOfExperience;
+    String nameOfTheEmployee;
+    String designation;
 
     ConstructorInParentClass(int age,int salary,double yearsOfExperience,String nameOfTheEmployee,String designation){
         this.age = age;
