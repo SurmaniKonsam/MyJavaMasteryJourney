@@ -1,4 +1,4 @@
-package main.java.org.example.concepts.Polymorphism;
+package org.example.concepts.Polymorphism.Inheritance;
 
 public class InheritanceIsA {
     int legs;
