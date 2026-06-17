@@ -14,9 +14,11 @@
         <module name="DependencyInjectionDemo (1)" />
         <module name="DependencyInjectionDemo (2)" />
         <module name="MockitoTestJUnit" />
+        <module name="DependencyInjectionDemo (7)" />
         <module name="DependencyInjectionDemo" />
         <module name="DependencyInjectionDemo (5)" />
         <module name="DependencyInjectionDemo (6)" />
+        <module name="FirstMacSpringBoot (5)" />
         <module name="FirstMacSpringBoot (4)" />
         <module name="FirstMacSpringBoot (1)" />
         <module name="FirstMacSpringBoot" />
@@ -25,10 +27,14 @@
         <module name="MockitoJunit" />
         <module name="mockitotest" />
         <module name="Java_Course" />
-        <module name="DataStructureAndAlgorithms" />
         <module name="SpringFrameWorkPractice" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DataStructureAndAlgorithms" target="20" />
+      <module name="DependencyInjectionDemo" target="20" />
+      <module name="FirstMacSpringBoot" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -39,11 +45,13 @@
       <module name="DependencyInjectionDemo (4)" options="-parameters" />
       <module name="DependencyInjectionDemo (5)" options="-parameters" />
       <module name="DependencyInjectionDemo (6)" options="-parameters" />
+      <module name="DependencyInjectionDemo (7)" options="-parameters" />
       <module name="FirstMacSpringBoot" options="-parameters" />
       <module name="FirstMacSpringBoot (1)" options="-parameters" />
       <module name="FirstMacSpringBoot (2)" options="-parameters" />
       <module name="FirstMacSpringBoot (3)" options="-parameters" />
       <module name="FirstMacSpringBoot (4)" options="-parameters" />
+      <module name="FirstMacSpringBoot (5)" options="-parameters" />
       <module name="mockitotest" options="-parameters" />
     </option>
   </component>
