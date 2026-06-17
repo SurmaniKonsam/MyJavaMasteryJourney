@@ -1,4 +1,4 @@
-package main.java.comparableComparator.Comparator;
+package comparableComparator.Comparator;
 
 
 /**
