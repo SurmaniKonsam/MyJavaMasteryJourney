@@ -46,7 +46,7 @@ public class NestedClass {
 
         NestedClass nestedClass = new NestedClass();
         AssignVariable assignVariable = nestedClass.new AssignVariable();
-        assignVariable.setVariableValue(423);
+        assignVariable.setVariableValue(421);
         System.out.println(assignVariable.getValue());
         /*
         StaticClassMember.staticMethod();
