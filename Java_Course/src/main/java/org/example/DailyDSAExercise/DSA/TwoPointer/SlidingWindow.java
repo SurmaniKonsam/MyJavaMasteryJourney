@@ -16,7 +16,7 @@ public class SlidingWindow {
                 sum -= arr[left];
                 left++;
             }
-        }
+        } 
         return minLength;
     }
 
