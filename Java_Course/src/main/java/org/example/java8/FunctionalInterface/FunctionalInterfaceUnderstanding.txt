@@ -1,8 +1,8 @@
 1. Hence, what I learnt?
--> That functional interface should have on abstract method, and it can have as many default and static method.
+-> That functional interface should have only one abstract method, and it can have as many default and static method.
 -> Usually all the functional interface which countered had only one abstract method e,g Function, predicate, supplier,
 function, bi-predicate, bi-function and consumer.
--> Functional interface like the usual interface goes must have its abstract method implemented.
+-> Functional interface like the usual interface goes must have its one and only abstract method implemented.
 -> That's where the power of lambda expression comes. Lambda expression reduces the imperative method of coding approach
 and rather goes with declarative, it just what it will do rather than how it will do, which i believe is rather
 comprehensive to everyone.So, lambda expression removes/omits the usual overriding abstract method approach, and rather

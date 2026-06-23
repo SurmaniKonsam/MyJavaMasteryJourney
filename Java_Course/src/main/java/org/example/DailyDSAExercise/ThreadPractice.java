@@ -2,6 +2,13 @@ package org.example.DailyDSAExercise;
 
 import java.util.List;
 
+class MyThread implements Runnable {
+    @Override
+    public void run() {
+        System.out.println("So we can implement Runnable, its an interface");
+    }
+}
+
 public class ThreadPractice {
     public static void main(String[] args) {
         Runnable runnable1 = () -> System.out.println("Run");
@@ -10,6 +17,10 @@ public class ThreadPractice {
         Runnable runnable4 = () -> System.out.println("Fly");
         Runnable runnable5 = () -> System.out.println("Jump");
 
+        MyThread myThread = new MyThread();
+
+
+        //so start is for threads, not for runnable.
         Thread[] threads = new Thread[5];
 
         /**
@@ -31,10 +42,7 @@ public class ThreadPractice {
             t.start();
         }
 
-
     }
-
-
 
 
 }
