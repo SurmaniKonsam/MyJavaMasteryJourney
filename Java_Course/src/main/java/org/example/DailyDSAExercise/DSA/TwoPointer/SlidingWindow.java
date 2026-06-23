@@ -70,6 +70,41 @@ public class SlidingWindow {
         return maxLength;
     }
 
+    //practice window : 23-06-2026
+
+    /**
+     * Problem statement.
+     * int[] arr = {2,1,5,2,8};
+     * int target = 7;
+     * Find:
+     * The smallest length contiguous subarray whose sum is greater than or equal to 7.
+     */
+    public void contiguousSmallestArrayLengthSumPractice(int element, int ...arr){
+        int expandPointer = 0;
+        int shrinkingPointer = 0;
+        int arraySum = 0;
+        int lengthOfArray = Integer.MAX_VALUE;
+        //int[] sld = {2,1,5,2,8};
+        while(expandPointer<arr.length){
+            //arraySum+=arr[leftIndex];
+            arraySum += arr[expandPointer];
+            while(arraySum>=element){
+                /**
+                 * Window valid.
+                 * 1. measure the current length
+                 * 2. find the minimum length
+                 * 3. shrink it.
+                 */
+                arraySum -= arr[shrinkingPointer];
+                int currentLength = (expandPointer-shrinkingPointer)+1;
+                lengthOfArray = Math.min(lengthOfArray,currentLength);
+                shrinkingPointer++;
+            }
+            expandPointer++;
+        }
+        System.out.println("length of smallest contiguous array : "+lengthOfArray);
+    }
+
 
 
     public static void main(String[] args) {
@@ -90,6 +125,10 @@ public class SlidingWindow {
         //System.out.println(returnTheShortestLength(3,arr));
         int[] arr2 = {1,1,0,0,0,0,0,1,5,2,3,2,1};
         //System.out.println(returnTheLargestLength(3,arr2));
-        System.out.println(returnLongestSubstring(10,arr2));
+        //System.out.println(returnLongestSubstring(10,arr2));
+        SlidingWindow slidingWindow = new SlidingWindow();
+        int[] sld = {2,1,0,0,0,5,2,8};
+        slidingWindow.contiguousSmallestArrayLengthSumPractice(7,sld);
+
     }
 }

@@ -1,4 +1,4 @@
-package main.java.org.example.java8.FunctionalInterface;
+package org.example.java8.FunctionalInterface;
 
 import java.util.function.Function;
 
@@ -15,6 +15,13 @@ interface CubeOfNumbers {
     int returnCube(int whatGetsIn);
 }
 
+class ConcreteUsage implements CubeOfNumbers{
+    @Override
+    public int returnCube(int number){
+        return number*number*number;
+    }
+}
+
 public class FunctionFunctionalInterface{
 
     /**
@@ -22,9 +29,10 @@ public class FunctionFunctionalInterface{
      * @param args -> yeah what is it -> have to study : 4:51 PM 13-05-25
      */
     public static void main(String[] args) {
-        CubeOfNumbers cubeOfNumbers = x -> x*x*x;
-        Function<Integer,Integer> rdCb = cubeOfNumbers::returnCube;
-        System.out.println(rdCb.apply(12));
+//        CubeOfNumbers cubeOfNumbers = x -> x*x*x;
+        ConcreteUsage concreteUsage = new ConcreteUsage();
+        Function<Integer,Integer> getValue = concreteUsage::returnCube;
+        System.out.println(getValue.apply(12));
 
     }
 }

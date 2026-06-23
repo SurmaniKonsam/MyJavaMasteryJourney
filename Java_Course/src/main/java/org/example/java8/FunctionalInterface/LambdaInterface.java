@@ -1,4 +1,4 @@
-package main.java.org.example.java8.FunctionalInterface;
+package org.example.java8.FunctionalInterface;
 
 
 /**

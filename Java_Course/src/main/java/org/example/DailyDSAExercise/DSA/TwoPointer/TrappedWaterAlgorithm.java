@@ -82,7 +82,11 @@ public class TrappedWaterAlgorithm {
         while(left<right){
             if(arr[left]<arr[right]){
                 if(arr[left]>leftMax){
-                    leftMax = arr[left];//current highest ceiling, water will spill.
+                    /*current highest ceiling, water will spill.
+                    Also be mindful, the height of the ceiling must be computer from the first index
+                    itself.
+                    */
+                    leftMax = arr[left];
                 }else{
                     trappedWater = trappedWater+leftMax-arr[left];
                     left++;
@@ -172,6 +176,66 @@ public class TrappedWaterAlgorithm {
         return maxWater;
     }
 
+    /**
+     * Practice time 2:12 PM
+     * 23-06-26
+     */
+    public void practiceTrappedWaterContainer(int ...arr){
+        int leftIndex = 0;
+        int rightIndex = arr.length-1;
+        int trappedWaterContainer = 0;
+        int leftWall = 0;
+        int rightWall = 0;
+        while(leftIndex<rightIndex){
+            if(arr[leftIndex]<arr[rightIndex]){
+                if(arr[leftIndex]>leftWall){
+                    leftWall = arr[leftIndex];
+                }else{
+                    trappedWaterContainer += (leftWall-arr[leftIndex]);
+                    leftIndex++;
+                }
+            }else{
+                if(arr[rightIndex]>rightWall){
+                    rightWall = arr[rightIndex];
+                }else{
+                    trappedWaterContainer += (rightWall-arr[rightIndex]);
+                    rightIndex--;
+                }
+            }
+        }
+        System.out.println("Trapped water over the arrays of ceiling : "+trappedWaterContainer);
+    }
+
+    /**
+     * Practice maximum water container.
+     * Invariants are the condition,
+     * which are if Wall, if less than the arr[leftIndex] or arr[rightIndex]
+     * and leftIndex<rightIndex will always be used for closing the loop.
+     */
+    public void practiceMaxWaterContained(int ...arr){
+        int leftIndex = 0;
+        int rightIndex = arr.length-1;
+        int leftWall;
+        int rightWall;
+        int maxDistanceBetweenLeftAndRightWall;
+        int maximumWaterContained = 0;
+        while(leftIndex<rightIndex){
+            leftWall = arr[leftIndex];
+            rightWall = arr[rightIndex];
+            if(arr[leftIndex]<arr[rightIndex]){
+                    maxDistanceBetweenLeftAndRightWall = (rightIndex-leftIndex);
+                    maximumWaterContained += (leftWall*maxDistanceBetweenLeftAndRightWall);
+                    leftIndex++;
+            }else{
+                maxDistanceBetweenLeftAndRightWall = (rightIndex-leftIndex);
+                maximumWaterContained += (rightWall*maxDistanceBetweenLeftAndRightWall);
+                rightIndex--;
+            }
+        }
+
+        System.out.println("Maximum water contained : "+maximumWaterContained);
+    }
+
     public static void main(String[] args) {
         int[] elevations = {1,8,6,2,5,4,8,3,7};
         //printMaxTrappedWater(elevations);
@@ -180,7 +244,12 @@ public class TrappedWaterAlgorithm {
         //System.out.println(maxWater(waterElevation));
 
         //System.out.println(Math.max(9,1232));
-        System.out.println("max water hold : "+maxWaterContainer(waterElevation));
+        //System.out.println("max water hold : "+maxWaterContainer(waterElevation));
+        //System.out.println(0>0);
+        int[] arr = {3,2,2,4};
+        TrappedWaterAlgorithm trappedWaterAlgorithm = new TrappedWaterAlgorithm();
+        trappedWaterAlgorithm.practiceTrappedWaterContainer(arr);
+        trappedWaterAlgorithm.practiceMaxWaterContained(arr);
 
     }
 }

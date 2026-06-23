@@ -74,6 +74,7 @@ public class TargetSum {
      * Sum of arr[left] + arr[arr.length-1] if less than target, start from left,
      * else, right.
      * if equal no need to traverse.
+     * Converging two pointer theory is used here.
      */
     static void targetSumTwoPointer(int target,int ...arr){
         int left = 0;

@@ -1,4 +1,4 @@
-package main.java.org.example.java8.FunctionalInterface;
+package org.example.java8.FunctionalInterface;
 
 public class LambdaExample {
     public static void main(String[] args) {
