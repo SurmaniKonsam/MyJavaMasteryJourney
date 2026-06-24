@@ -5,7 +5,8 @@ package org.example.DailyDSAExercise.DSA.TwoPointer;
  */
 public class TrappedWaterAlgorithm {
     static void printMaxTrappedWater(int ...arr){
-        int left = 0; int right = arr.length-1; 
+        int left = 0;
+        int right = arr.length-1;
         System.out.println("right : "+right);
         /**
          * Initially leftMaxWall, and rightMaxWall are put zero, as a starting point
@@ -192,6 +193,7 @@ public class TrappedWaterAlgorithm {
                     leftWall = arr[leftIndex];
                 }else{
                     trappedWaterContainer += (leftWall-arr[leftIndex]);
+                    System.out.println("trapped water value : "+trappedWaterContainer);
                     leftIndex++;
                 }
             }else{
@@ -215,20 +217,19 @@ public class TrappedWaterAlgorithm {
     public void practiceMaxWaterContained(int ...arr){
         int leftIndex = 0;
         int rightIndex = arr.length-1;
-        int leftWall;
-        int rightWall;
+        int wall;
         int maxDistanceBetweenLeftAndRightWall;
         int maximumWaterContained = 0;
         while(leftIndex<rightIndex){
-            leftWall = arr[leftIndex];
-            rightWall = arr[rightIndex];
+            wall = Math.min(arr[leftIndex],arr[rightIndex]);
             if(arr[leftIndex]<arr[rightIndex]){
+                //compute first -> then reduce
                     maxDistanceBetweenLeftAndRightWall = (rightIndex-leftIndex);
-                    maximumWaterContained += (leftWall*maxDistanceBetweenLeftAndRightWall);
+                    maximumWaterContained = maximumWaterContained+(wall*maxDistanceBetweenLeftAndRightWall);
                     leftIndex++;
             }else{
                 maxDistanceBetweenLeftAndRightWall = (rightIndex-leftIndex);
-                maximumWaterContained += (rightWall*maxDistanceBetweenLeftAndRightWall);
+                maximumWaterContained += (wall*maxDistanceBetweenLeftAndRightWall);
                 rightIndex--;
             }
         }
@@ -248,7 +249,7 @@ public class TrappedWaterAlgorithm {
         //System.out.println(0>0);
         int[] arr = {3,2,2,4};
         TrappedWaterAlgorithm trappedWaterAlgorithm = new TrappedWaterAlgorithm();
-        trappedWaterAlgorithm.practiceTrappedWaterContainer(arr);
+        //trappedWaterAlgorithm.practiceTrappedWaterContainer(arr);
         trappedWaterAlgorithm.practiceMaxWaterContained(arr);
 
     }

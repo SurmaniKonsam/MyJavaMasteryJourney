@@ -38,5 +38,9 @@ Still valid?
     Store again
 ↓
 Continue
+
+Conclusion:
+- Preserve first
+- Then modify
 ````
 
