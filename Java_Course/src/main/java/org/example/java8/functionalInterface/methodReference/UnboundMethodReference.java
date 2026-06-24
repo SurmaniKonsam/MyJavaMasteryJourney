@@ -1,4 +1,4 @@
-package main.java.org.example.java8.FunctionalInterface.MethodReference;
+package org.example.java8.functionalInterface.methodReference;
 
 import java.util.Optional;
 

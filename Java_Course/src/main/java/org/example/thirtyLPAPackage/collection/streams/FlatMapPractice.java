@@ -1,4 +1,4 @@
-package org.example.thirtyLPAPackage.collection.Streams;
+package org.example.thirtyLPAPackage.collection.streams;
 
 import java.util.ArrayList;
 import java.util.List;

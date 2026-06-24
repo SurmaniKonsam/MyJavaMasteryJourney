@@ -1,4 +1,4 @@
-package org.example.thirtyLPAPackage.collection.LinkList;
+package org.example.thirtyLPAPackage.collection.linkList;
 
 class DoubleLinkList{
     int value;

@@ -1,4 +1,4 @@
-package org.example.thirtyLPAPackage.collection.ComparatorComparable.Comparator;
+package org.example.thirtyLPAPackage.collection.comparatorComparable.comparator;
 
 
 public class Employee implements Comparable<Employee> {
