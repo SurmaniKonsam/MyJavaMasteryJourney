@@ -1,4 +1,4 @@
-package org.example.solidPrinciples.ocp;
+package org.example.solidPrinciples;
 
 class WalletPayment implements PaymentMethod{
     @Override

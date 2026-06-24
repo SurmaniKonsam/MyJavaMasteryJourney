@@ -1,4 +1,4 @@
-package org.example.solidPrinciples.ocp;
+package org.example.solidPrinciples;
 
 import java.util.ArrayList;
 import java.util.List;

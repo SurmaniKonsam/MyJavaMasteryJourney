@@ -1,4 +1,4 @@
-package org.example.solidPrinciples.ocp;
+package org.example.solidPrinciples;
 
 class UPIPayment implements PaymentMethod{
     @Override
