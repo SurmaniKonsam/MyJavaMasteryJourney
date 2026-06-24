@@ -1,4 +1,4 @@
-package org.example.DailyDSAExercise.DSA.TwoPointer;
+package org.example.dailyDSAExercise.dsa.TwoPointer;
 
 import java.util.*;
 
