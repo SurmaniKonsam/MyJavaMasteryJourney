@@ -1,4 +1,4 @@
-package org.example.DailyDSAExercise.DSA.SlidingWindow;
+package org.example.dailyDSAExercise.dsa.slidingWindow;
 
 public class SlidingWindow {
 
