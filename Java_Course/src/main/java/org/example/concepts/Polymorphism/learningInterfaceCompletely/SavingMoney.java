@@ -6,8 +6,4 @@ public class SavingMoney implements Account{
         return 134233;
     }
 
-    @Override
-    public void showMoney(){
-        System.out.println(" money : "+getMoney());
-    }
 }

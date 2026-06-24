@@ -1,6 +1,6 @@
-package org.example.DailyDSAExercise.DSA.TwoPointer;
+package org.example.DailyDSAExercise.DSA.SlidingWindow;
 
-public class TargetSum {
+public class TargetSumSlidingWindow {
 
     /**
      *
