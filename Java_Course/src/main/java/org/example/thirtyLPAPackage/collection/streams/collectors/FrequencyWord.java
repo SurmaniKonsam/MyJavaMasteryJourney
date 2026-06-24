@@ -1,4 +1,4 @@
-package org.example.thirtyLPAPackage.collection.Streams.Collectors;
+package org.example.thirtyLPAPackage.collection.streams.collectors;
 
 import java.util.HashMap;
 import java.util.Map;

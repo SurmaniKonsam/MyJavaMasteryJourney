@@ -1,4 +1,4 @@
-package org.example.thirtyLPAPackage.collection.HashMap;
+package org.example.thirtyLPAPackage.collection.hashMap;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
