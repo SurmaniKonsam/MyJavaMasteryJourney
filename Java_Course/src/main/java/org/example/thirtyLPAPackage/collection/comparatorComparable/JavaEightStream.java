@@ -1,4 +1,4 @@
-package org.example.thirtyLPAPackage.collection.ComparatorComparable;
+package org.example.thirtyLPAPackage.collection.comparatorComparable;
 
 
 import java.util.ArrayList;

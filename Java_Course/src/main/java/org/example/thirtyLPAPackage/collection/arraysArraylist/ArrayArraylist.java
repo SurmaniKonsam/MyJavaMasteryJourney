@@ -1,4 +1,4 @@
-package org.example.thirtyLPAPackage.collection.ArraysArraylist;
+package org.example.thirtyLPAPackage.collection.arraysArraylist;
 
 import java.util.*;
 
