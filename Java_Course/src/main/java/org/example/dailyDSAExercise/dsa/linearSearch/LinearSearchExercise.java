@@ -2,6 +2,7 @@ package org.example.dailyDSAExercise.dsa.linearSearch;
 
 
 public class LinearSearchExercise {
+    //small change to understand conflict merge
 
     static void findMinimumElement(int ...arr){
         //[7, 2, 9, 1, 5]
