@@ -2,7 +2,7 @@ package org.example.dailyDSAExercise.dsa.linearSearch;
 
 
 public class LinearSearchExercise {
-    //small change to understand conflict merge
+    //small change to understand conflict merge 2 23 423 43 24 234 
     static void findMinimumElement(int ...arr){
         //[7, 2, 9, 1, 5]
         int minimumValue = Integer.MAX_VALUE;
