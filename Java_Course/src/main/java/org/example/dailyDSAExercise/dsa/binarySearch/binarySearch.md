@@ -37,3 +37,9 @@ Pattern:
 5. Stop when answer is found or window collapses
 
 That's the entire algorithm.
+```
+
+### Mid Index Formula
+```
+ int mid = low + (high - low) / 2
+```
