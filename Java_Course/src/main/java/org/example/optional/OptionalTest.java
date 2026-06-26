@@ -1,4 +1,4 @@
-package main.java.org.example.java8.Optional;
+package org.example.optional;
 
 import java.util.Optional;
 

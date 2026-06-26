@@ -1,7 +1,4 @@
-package main.java.org.example.java8.Optional;
-
-import java.util.ArrayList;
-import java.util.List;
+package org.example.optional;
 
 /**
  * Defining custom Cat pojo
