@@ -112,6 +112,33 @@ public class LinearSearchExercise {
         return getProfit;
     }
 
+    //let's play with this.
+    public static int whileLogic(int target,int low, int high, int ...arr){
+        while(low<=high){
+            if(arr[low]==target){
+                return low;
+            }
+            low++;
+        }
+        return -1;
+    }
+
+    public static int checkTheTargetElement(int target,int ...arr){
+        int low = 0;
+        int high = arr.length-1;
+        int mid = low + (high-low)/2;
+        if(arr[mid]==target){
+            return mid;
+        }else if(arr[mid]>target){
+            high = mid-1;
+            return whileLogic(target,low,high,arr);
+        }else{
+            low = mid+1;
+            return whileLogic(target,low,high,arr);
+        }
+
+    }
+
     public static void main(String[] args) {
         int[] minimumExercise = {7, 2, 9, 1, 5};
         //findMinimumElement(minimumExercise);
@@ -128,7 +155,10 @@ public class LinearSearchExercise {
         int[] noElements = {};
         //System.out.println(countFrequencyOfTarget(52314123,noElements));
         int[] profitMargin = {7,1,5,3,6,8};
-        System.out.println(buyAndSellStock(2,profitMargin));
+        //System.out.println(buyAndSellStock(2,profitMargin));
+
+        int[] sortedElement = {2, 4, 6, 8, 10, 12, 14, 16};
+        System.out.println(checkTheTargetElement(10,sortedElement));
 
     }
 
