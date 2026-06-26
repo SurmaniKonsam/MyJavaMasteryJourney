@@ -46,6 +46,15 @@ That's the entire algorithm.
 
 ### Tricks
 
+#### Core essence
+```text
+1. Target
+2. High
+3. Low
+4. Mid
+5. Preserve the answer
+```
+
 #### Firs Occurrence
 ```java
 /*
