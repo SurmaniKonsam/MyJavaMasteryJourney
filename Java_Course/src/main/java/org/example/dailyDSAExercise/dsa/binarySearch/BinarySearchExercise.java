@@ -102,9 +102,7 @@ public class BinarySearchExercise {
         int answer = -1;
 
         while (low <= high) {
-
             int mid = low + (high - low) / 2;
-
             //answer is modified only when the target value gets equal to the arr[mid] value.
             //and since it's sorted in ascending order, therefore we are making the high reduced.
             if (arr[mid] == target) {
@@ -118,7 +116,6 @@ public class BinarySearchExercise {
                 low = mid + 1;
             }
         }
-
         return answer;
     }
 

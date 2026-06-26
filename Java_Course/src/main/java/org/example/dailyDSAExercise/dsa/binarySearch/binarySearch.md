@@ -43,3 +43,37 @@ That's the entire algorithm.
 ```
  int mid = low + (high - low) / 2
 ```
+
+### Tricks
+
+#### Firs Occurrence
+```java
+/*
+-> For First occurrence.
+-> first occurrence, means ascending order
+-> fetch and preserve the answer when mid-index value matches the target
+-> main key to remember is preserving the fetched value.
+
+//This is the template.
+while(low<=high){
+    //answer
+        }
+return answer;
+ */
+
+void sample(){
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (arr[mid] == target) {
+            answer = mid;      
+            high = mid - 1; 
+        }
+        else if (target < arr[mid]) {
+            high = mid - 1;
+        }
+        else {
+            low = mid + 1;
+        }
+    }
+}
+```
