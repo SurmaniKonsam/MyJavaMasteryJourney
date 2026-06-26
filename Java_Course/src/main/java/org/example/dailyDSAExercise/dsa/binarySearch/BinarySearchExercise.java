@@ -64,6 +64,7 @@ public class BinarySearchExercise {
             }
         }
         return -1;
+        //minor changes
     }
 
     //#3 -> Exercise 3: 26-06-26
