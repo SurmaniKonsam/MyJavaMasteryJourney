@@ -40,8 +40,10 @@ That's the entire algorithm.
 ```
 
 ### Mid Index Formula
-```
- int mid = low + (high - low) / 2
+```Java
+ int mid = low + (high - low) / 2;
+ //Also, mid is dynamic, it will 
+ //always change inside the loop.
 ```
 
 ### Tricks
@@ -86,3 +88,21 @@ void sample(){
     }
 }
 ```
+
+### Lower Bound Pattern.
+```textmate
+Found valid?
+
+↓
+
+Yes
+
+↓
+
+Save answer
+
+↓
+
+Search Left
+```
+
