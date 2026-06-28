@@ -123,6 +123,8 @@ public class BinarySearchExercise {
      * Brainstormed
      * 1. Last occurrence, means keep pushing right, extreme right of any duplicate elements.
      * 2. high -> must be changed to low = mid+1; if found keep search right.
+     * 3. Also last occurrence of number means, if found get the index, also if duplicate exist, keep pushing right,
+     * pushing right means -> low = mid+1; check if
      */
     public static int lastOccurrence(int[] arr, int target){
         int low = 0;
@@ -139,9 +141,8 @@ public class BinarySearchExercise {
             }
             else if (target < arr[mid]) {
                 high = mid - 1;
-            }
-            else {
-                low = mid + 1;
+            }else{
+                low = mid+1;
             }
         }
         return answer;
@@ -485,6 +486,8 @@ public class BinarySearchExercise {
 
         int[] lb = {2, 4, 6, 8, 8, 10, 12, 14, 16};
         //System.out.println(lowerBoundIndex(13,lb));
-        System.out.println(upperBound(17,lb));
+        //System.out.println(upperBound(17,lb));
+        int[] lstOcr = {1, 2, 2, 2, 5};
+        System.out.println(lastOccurrence(lstOcr,2));
     }
 }

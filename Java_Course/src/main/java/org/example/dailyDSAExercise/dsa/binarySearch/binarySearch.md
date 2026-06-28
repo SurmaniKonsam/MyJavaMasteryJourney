@@ -48,7 +48,7 @@ Upper Bound
 
 ### Quick Differences/Tricks
 ```textmate
-Lower bound and upper bound have only one logic difference.
+Lower bound and upper bound have only one logic difference, insertion sort
 
 ____________
 Lower bound,|
@@ -67,6 +67,13 @@ Coding example |
 lower Bound -> if(arr[mid]>=target){
     high = mid-1;
 }
+/*
+Even insertion sort, is same as the lower bound. 
+check if the target is found, if its found then return the index, else, check if its value
+is less than the arr[mid], if it is get the mid index, this is where the element
+will be inserted.
+*/
+
 upper Bound -> if(arr[mid]>target){
     high = mid -1;
 }
