@@ -294,10 +294,15 @@ public class BinarySearchExercise {
             if(target==arr[mid]){
                 return mid;
             }
+            /*
+            If, target belongs to the sorted half, check in this block.
+             */
             if(arr[low]<=arr[mid]){
                 if(target>=arr[low] && target<arr[mid]){
                     high = mid-1;
                 }else{
+                    //Means target is out of the left sorted array.
+                    System.out.println("arr["+mid+"] : "+arr[mid]+" | target : "+target);
                     low = mid+1;
                 }
             }else{
@@ -309,6 +314,46 @@ public class BinarySearchExercise {
 
             }
 
+        }
+        return -1;
+    }
+
+    //rotated array -> 28-06-26.
+    /*
+    Find the index of the target. Return -1 if not found.
+    Index : 0  1  2  3  4  5  6
+    Value : 15 18 2 3 6 12 14
+    Target
+        6
+    Expected Output:
+        4
+     */
+    public static int findRotateArrayIndex(int target, int ...arr){
+        int low = 0;
+        int high = arr.length-1;
+        while(low<=high){
+            int mid = low + (high-low)/2;
+            if(arr[mid]==target){
+                return mid;
+            }
+            //it will get inside this if block no matter what, if the first mid-index value is not found.
+            if(arr[mid]<=arr[high]){
+                //sorted right side
+                if(target>arr[mid] && target<=arr[high]){
+                    //Inclusive of the boundary.
+                    low = mid+1;
+                }else{
+                    //push off to left side.
+                    high = mid-1;
+                }
+            }else{
+                //Move to the left.
+                if(target<arr[mid] && target>=arr[low]){
+                    high = mid-1;
+                }else{
+                    low = mid+1;
+                }
+            }
         }
         return -1;
     }
@@ -334,6 +379,8 @@ public class BinarySearchExercise {
         //[30, 40, 50, 55, 60, 70|mid]; let's solve this.
         //System.out.println(returnRotatedIndex(5,rotatedArr));
         //System.out.println(jarvisSearchRotatedArray(rotatedArr,10));
-        System.out.println(returnIndexTargetRotatedArray(10,rotatedArr));
+        //System.out.println(returnIndexTargetRotatedArray(10,rotatedArr));
+        int[] arrRt = {15, 18, 2, 3, 6, 12, 14};
+        System.out.println(findRotateArrayIndex(15,arrRt));
     }
 }
