@@ -2,41 +2,31 @@
 ```
 Binary Search:
 
-What is monotonic movement?
-Once it changes...
-it never changes back.
--> Means if true changes to false, it never changes back
-to true again.
-
-Non-monotonic state
-true -> false -> back to true.
-Its not monotonic.
-
+Algorithm
 1. Check middle
 2. Check if the target element is greater than or smaller than middle.
+3. If{
+        target is greater than the middle -> move right -> low = mid -1;
+        target is less than the middle -> move left -> high = mid + 1;
+    }
+4. mid -> is defined via high and low index, computed inside the target and mid value 
+if comparing block.
 
-Pattern:
-5 steps.
-
-1. Is the search space ordered?
-
-        ↓
-
-2. Can I eliminate half?
-
-        ↓
-
-3. Maintain the invariant
-
-        ↓
-
-4. Shrink the window
-
-        ↓
-
-5. Stop when answer is found or window collapses
 
 That's the entire algorithm.
+```
+```Java
+// Main template of binary search
+public int binaryTemplate(int target, int ...arr){
+    /*
+    int low = 0;
+    int high = arr.length-1;
+    while(low<=high){
+        int mid = low + (high-low)/2;
+    }
+    return -1;
+     */
+}
 ```
 
 ### Mid Index Formula
@@ -46,63 +36,42 @@ That's the entire algorithm.
  //always change inside the loop.
 ```
 
-### Tricks
-
-#### Core essence
+### Confusion
 ```text
-1. Target
-2. High
-3. Low
-4. Mid
-5. Preserve the answer
+Lower Bound:
+-> The element to be found must be either equal or just greater than the target element.
+-> Means, if equal check if there is element 
+
+Upper Bound
+-> The first element that is strictly greater than the target.
 ```
 
-#### Firs Occurrence
-```java
-/*
--> For First occurrence.
--> first occurrence, means ascending order
--> fetch and preserve the answer when mid-index value matches the target
--> main key to remember is preserving the fetched value.
-
-//This is the template.
-while(low<=high){
-    //answer
-        }
-return answer;
- */
-
-void sample(){
-    while (low <= high) {
-        int mid = low + (high - low) / 2;
-        if (arr[mid] == target) {
-            answer = mid;      
-            high = mid - 1; 
-        }
-        else if (target < arr[mid]) {
-            high = mid - 1;
-        }
-        else {
-            low = mid + 1;
-        }
-    }
-}
-```
-
-### Lower Bound Pattern.
+### Quick Differences/Tricks
 ```textmate
-Found valid?
+Lower bound and upper bound have only one logic difference.
 
-↓
+____________
+Lower bound,|
+------------ 
+-> We are considering inclusive of arr[mid]>=target, that is if equal return
+the mid index altogether if no other element greater than the mid value is found.
 
-Yes
+____________
+Upper Bound |
+-------------
+-> We are checking exclusively, that is check only if target>arr[mid], not equal to but
+only when the target is greater than the arr[mid]
+_______________
+Coding example |
+----------------
+lower Bound -> if(arr[mid]>=target){
+    high = mid-1;
+}
+upper Bound -> if(arr[mid]>target){
+    high = mid -1;
+}
 
-↓
 
-Save answer
-
-↓
-
-Search Left
 ```
+
 

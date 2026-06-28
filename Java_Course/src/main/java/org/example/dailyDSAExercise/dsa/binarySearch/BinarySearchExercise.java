@@ -149,45 +149,8 @@ public class BinarySearchExercise {
 
     /**
      * LowerBound -> 27-06-26 -> #2
-     * Return the index of the first element that is greater than or equal to the target.
+     * UpperBound -> Is not clear.
      */
-    public static int returnLowerBoundIndex(int target, int ...arr){
-        //element either way since we are looking for the nearest element to the target or equal then
-        //returning -1; is of no meaning.
-        int low = 0;
-        int high = arr.length-1;
-        int index = 0;
-        while(low<=high){
-            int mid = low + (high-low)/2;
-            if(arr[mid]>=target) {
-                index = mid;
-                high = mid-1;
-            }else if(target>arr[mid]){
-                low = mid+1;
-            }
-        }
-        return index;
-    }
-
-    /**
-     *  UpperBound -> 27-06-26 -> #3
-     *  Return the index of the first element that is strictly greater than the target
-     */
-    public static int returnUpperBoundIndex(int target, int ...arr){
-        int answer = arr.length;
-        int low = 0;
-        int high = arr.length-1;
-        while(low<=high){
-            int mid = low + (high-low)/2;
-            if(target>=arr[mid]){
-                answer = mid+1;
-                low = mid+1;
-            }else if(target<arr[mid]){
-                high = mid-1;
-            }
-        }
-        return answer;
-    }
 
     /**
      * Search Insert Position -> 27-06-26 #3
@@ -196,7 +159,7 @@ public class BinarySearchExercise {
          * otherwise, return the index where it should be inserted to maintain sorted order.
          * The insertion must always happen before the arr[mid], index, means it must always
          * search the left end of the array from the arr[mid] as high point.
-     *
+     * This needs to be studied rather more deep.
      */
     public static int getInsertionIndex(int target, int ...arr){
         int low = 0;
@@ -204,7 +167,7 @@ public class BinarySearchExercise {
         int answer = -1;
         while(low<=high){
            int mid = low + (high-low)/2;
-           if(arr[mid]>=target){
+           if(target<=arr[mid]){
                answer = mid;
                high = mid-1;
            }else{
@@ -358,6 +321,127 @@ public class BinarySearchExercise {
         return -1;
     }
 
+    /*
+        Date -> 28-06-26
+        Find Minimum in Rotated Sorted Array -
+        Problem
+
+        Find the minimum element.
+
+        Index : 0 1 2 3 4 5 6
+        Value : 4 5 6 7 0 1 2
+     */
+    public static int minIndexRotatedArray(int ...arr){
+        //for sorted array its easy.
+        int low = 0;
+        int high = arr.length-1;
+        int minimumElement = Integer.MAX_VALUE;
+        while(low<=high){
+            int mid = low + (high-low)/2;
+            if(arr[mid]<minimumElement){
+                minimumElement = Math.min(arr[mid],minimumElement);
+                high = mid-1;
+            }else{
+                low = mid+1;
+            }
+        }
+        return minimumElement;
+    }
+
+    /*
+        Date -> 28-06-26
+        Find maximum element in a sorted array.
+     */
+    public static int maxIndexRotatedArray(int ...arr){
+        //for sorted array its easy.
+        int low = 0;
+        int high = arr.length-1;
+        int maxElement = Integer.MIN_VALUE;
+        while(low<=high){
+            int mid = low + (high-low)/2;
+            //sorted, max element will be found in extreme end.
+            if(arr[mid]>=maxElement){
+                maxElement = Math.max(arr[mid],maxElement);
+                low = mid+1;
+            }else{
+                high = mid-1;
+            }
+        }
+        return maxElement;
+    }
+
+
+    public static int returnPeakValue(int a, int b, int c){
+        return b;
+    }
+
+    /*
+        Peak Value.
+        What does peak value mean?
+        ->   Peak -> check right and left value.
+        If peak is greater than both right and left, then its peak value.
+        Else,
+        For boundary elements, we only compare with the existing neighbor
+            That is Either
+                Right side only if extreme left.
+                Left side only if extreme right.
+        One understanding -> mid is always the deciding index.
+     */
+    public static int peakValue(int ...arr) {
+        int low = 0;
+        int high = arr.length - 1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            int prev = mid - 1;
+            int nxt = mid + 1;
+            if(arr[mid]>arr[prev]){
+                low = mid+1;
+            }else if(arr[mid]<arr[prev]){
+                high = mid-1;
+            }
+            else if(arr[mid]>arr[prev] && arr[mid]>arr[nxt]){
+                return arr[mid];
+            }
+        }
+        return -1;
+    }
+
+    //lower bound -> greater than or equal, nearest neighbour, if sorted usually proceed to move to right.
+    public static int lowerBoundIndex(int target, int ...arr){
+        int low = 0;
+        int high = arr.length-1;
+        int answer = -1;
+        while(low<=high){
+            int mid = low + (high-low)/2;
+            if(arr[mid]>=target){
+                answer = mid;
+                high = mid-1;
+            }else{
+                low = mid+1;
+            }
+        }
+        return answer;
+    }
+
+    public static int upperBound(int target, int ...arr){
+        int low = 0;
+        int high = arr.length-1;
+        int answer = -1;
+        while(low<=high){
+            int mid = low + (high-low)/2;
+            if(arr[mid]>target){
+                answer = mid;
+                high = mid-1;
+            }else{
+                low = mid+1;
+            }
+        }
+        return answer;
+    }
+
+
+
+
 
     public static void main(String[] args) {
         int[] arr = {2, 4, 6, 8, 10, 12, 14, 16};
@@ -381,6 +465,26 @@ public class BinarySearchExercise {
         //System.out.println(jarvisSearchRotatedArray(rotatedArr,10));
         //System.out.println(returnIndexTargetRotatedArray(10,rotatedArr));
         int[] arrRt = {15, 18, 2, 3, 6, 12, 14};
-        System.out.println(findRotateArrayIndex(15,arrRt));
+        //System.out.println(findRotateArrayIndex(15,arrRt));
+        int[] arrMin = {-1, 3, 7, 11, 15, 19, 24, 28, 32, 37, 41};
+        //System.out.println(minIndexRotatedArray(arrMin));
+        //System.out.println(maxIndexRotatedArray(arrMin));
+        int[] peaks =  {1, 2, 1, 3, 3, 7};
+        /**
+         * what should be the flow?
+         * -> get mid
+         * -> check if it's greater than the neighbouring element ->
+             * If it is return it;
+         * -> else check if prev index is negative -> if it is then compare the mid-value with the next value only.
+             * If, mid-value is greater than the next, then return it, else -> low = mid+1;
+         * -> else check if next index is out of bound -> if it is then compare the mid-value with the prev only.
+             * If, mid-value is greater than the prev, then return it, else -> high = mid-1;
+         *
+         */
+        //System.out.println(peakValue(peaks));
+
+        int[] lb = {2, 4, 6, 8, 8, 10, 12, 14, 16};
+        //System.out.println(lowerBoundIndex(13,lb));
+        System.out.println(upperBound(17,lb));
     }
 }
