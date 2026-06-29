@@ -392,17 +392,16 @@ public class BinarySearchExercise {
         int low = 0;
         int high = arr.length - 1;
         while (low <= high) {
-            int mid = low + (high - low) / 2;
-            int prev = mid - 1;
-            int nxt = mid + 1;
-            if(arr[mid]>arr[prev]){
+            int mid = low + (high-low)/2;
+            if(arr[mid]<arr[mid+1]){
                 low = mid+1;
-            }else if(arr[mid]<arr[prev]){
-                high = mid-1;
-            }
-            else if(arr[mid]>arr[prev] && arr[mid]>arr[nxt]){
+            }else if(arr[mid]>arr[mid-1] && arr[mid]>arr[mid+1]){
                 return arr[mid];
             }
+            else{
+                high = mid-1;
+            }
+
         }
         return -1;
     }
@@ -428,7 +427,7 @@ public class BinarySearchExercise {
         int low = 0;
         int high = arr.length-1;
         int answer = -1;
-        while(low<=high){
+        while(low<high){
             int mid = low + (high-low)/2;
             if(arr[mid]>target){
                 answer = mid;
@@ -471,6 +470,7 @@ public class BinarySearchExercise {
         //System.out.println(minIndexRotatedArray(arrMin));
         //System.out.println(maxIndexRotatedArray(arrMin));
         int[] peaks =  {1, 2, 1, 3, 3, 7};
+        System.out.println(peakValue(peaks));
         /**
          * what should be the flow?
          * -> get mid
@@ -488,6 +488,7 @@ public class BinarySearchExercise {
         //System.out.println(lowerBoundIndex(13,lb));
         //System.out.println(upperBound(17,lb));
         int[] lstOcr = {1, 2, 2, 2, 5};
-        System.out.println(lastOccurrence(lstOcr,2));
+        //System.out.println(lastOccurrence(lstOcr,2));
+
     }
 }
