@@ -1,9 +1,10 @@
 ## Binary Search Algorithm
+
 ```
 Binary Search:
 
 Algorithm
-1. Check middle
+1. Check middle -> always algorithm alwasy start with checking the mid element.
 2. Check if the target element is greater than or smaller than middle.
 3. If{
         target is greater than the middle -> move right -> low = mid -1;
@@ -78,7 +79,21 @@ upper Bound -> if(arr[mid]>target){
     high = mid -1;
 }
 
-
 ```
 
+### Most Important Finding -> right/left movement.
+
+```textmate
+1. Move right -> low -> till -> high.
+        Now, low can be:
+                1 -> low = mid;
+                2 -> low = mid+1;
+                Both depends on the logic and the question requirement.
+------------------------------------------------------------------------>               
+2. Move left -> high -> till -> low.
+        Now, high can be:
+                1 -> high = mid;
+                2 -> high = mid-1;
+                Both depends on the logic and the question requirement.
+```
 

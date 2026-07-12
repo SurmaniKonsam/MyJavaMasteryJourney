@@ -376,38 +376,9 @@ public class BinarySearchExercise {
         return b;
     }
 
-    /*
-        Peak Value.
-        What does peak value mean?
-        ->   Peak -> check right and left value.
-        If peak is greater than both right and left, then its peak value.
-        Else,
-        For boundary elements, we only compare with the existing neighbor
-            That is Either
-                Right side only if extreme left.
-                Left side only if extreme right.
-        One understanding -> mid is always the deciding index.
-     */
-    public static int peakValue(int ...arr) {
-        int low = 0;
-        int high = arr.length - 1;
-        while (low <= high) {
-            int mid = low + (high-low)/2;
-            if(arr[mid]<arr[mid+1]){
-                low = mid+1;
-            }else if(arr[mid]>arr[mid-1] && arr[mid]>arr[mid+1]){
-                return arr[mid];
-            }
-            else{
-                high = mid-1;
-            }
-
-        }
-        return -1;
-    }
-
     //lower bound -> greater than or equal, nearest neighbour, if sorted usually proceed to move to right.
     public static int lowerBoundIndex(int target, int ...arr){
+        //int[] lb = {2, 4, 6, 8, 8, 10, 12, 14, 16}; -> always put the array up in the method block.
         int low = 0;
         int high = arr.length-1;
         int answer = -1;
@@ -439,6 +410,54 @@ public class BinarySearchExercise {
         return answer;
     }
 
+    /*
+       I think I have cracked the essence of peak value.
+       Though it's not natural, and I still haven't found the logic and invariant deduction.
+       But I can explain the code, and I have remembered it for now.
+       The goal is always to strip the other half, move the mid, left or right side will be stripped away and then
+       the mid or the peak value will be returned.
+       Funny enough, I will have it remember this way.
+       The peak value will always get return when you are at the lowest.
+     */
+    public static int peakValue(int ...arr) {
+        int low = 0;
+        int high = arr.length - 1;
+        while (low < high) {
+           int mid = low + (high-low)/2;
+           if(arr[mid]<arr[mid+1]){
+               /**
+                * This is the main block.
+                * The goal is to check -> the current element which will be -> arr[mid].
+                * and the next element -> which will be -> arr[mid+1]
+                * if arr[mid] < arr[mid+1]; -> then, yes its obvious that its in ascending order.
+                * If it's ascending, "Then, a peak is guaranteed to exist somewhere on the right."
+                * Therefore, we are having our low as low = mid+1;
+                * if not,
+                * which is the else block, its says that arr[mid]>arr[mid+1] -> then time to shift left.
+                * usual convention is to have the high = mid-1; that is to reduce the current index by 1.
+                * but, peak element is where we are checking for the neighbouring element value.
+                * Hence, if arr[mid]>arr[mid+1], then it means -> right side is descending.
+                * We must be concerned with the left end only.
+                * so, by  now if suppose we have current -> 4, next -> 3.
+                * then we are expecting the elements from low to currentIndex -1; be smaller than the current.
+                * But because we are comparing the current both with the left and the right.
+                * current has to be included, therefore, high = mid; //or high = 4, next is -> 3, lets see what left
+                * would give us, and then as the iteration will go on,
+                * "Eventually, the search space shrinks to exactly one index (low == high).
+                * Since every iteration preserved the invariant that the peak remains within [low...high], we are
+                * reducing the search space so much, that we would arrive at conclusion where low = peak value.
+                * the only remaining index must be the peak."
+                *
+                *
+                */
+               low = mid+1;
+           }else{
+               high = mid;
+           }
+        }
+        return arr[low];
+
+    }
 
 
 
@@ -469,7 +488,7 @@ public class BinarySearchExercise {
         int[] arrMin = {-1, 3, 7, 11, 15, 19, 24, 28, 32, 37, 41};
         //System.out.println(minIndexRotatedArray(arrMin));
         //System.out.println(maxIndexRotatedArray(arrMin));
-        int[] peaks =  {1, 2, 1, 3, 3, 7};
+        int[] peaks =  {1, 2, 3, 2, 3, 7};
         System.out.println(peakValue(peaks));
         /**
          * what should be the flow?
@@ -485,7 +504,7 @@ public class BinarySearchExercise {
         //System.out.println(peakValue(peaks));
 
         int[] lb = {2, 4, 6, 8, 8, 10, 12, 14, 16};
-        //System.out.println(lowerBoundIndex(13,lb));
+        //System.out.println(lowerBoundIndex(5,lb));
         //System.out.println(upperBound(17,lb));
         int[] lstOcr = {1, 2, 2, 2, 5};
         //System.out.println(lastOccurrence(lstOcr,2));
