@@ -25,6 +25,7 @@ public class BoundExercise {
                 lowerBoundIndex = mid;
                 high = mid - 1;
             }else {
+                System.out.println("here first");
                 low = mid + 1;
             }
         }
@@ -33,6 +34,6 @@ public class BoundExercise {
 
     public static void main(String[] args) {
         int[] arr = {2, 5, 8, 12, 17, 21, 29, 35};
-        System.out.println(lowerBoundIndex(12,arr));
+        System.out.println(lowerBoundIndex(17,arr));
     }
 }

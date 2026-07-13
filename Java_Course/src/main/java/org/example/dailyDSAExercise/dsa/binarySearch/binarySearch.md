@@ -1,7 +1,9 @@
 ## Binary Search Algorithm
 
 ```
-Binary Search:
+Binary Search: 
+Main idea ->  Binary Search permanently eliminates half of the search space based 
+on an invariant.
 
 Algorithm
 1. Check middle -> always algorithm alwasy start with checking the mid element.
@@ -45,7 +47,25 @@ ____________
 Lower bound,|
 ------------ 
 -> We are considering inclusive of arr[mid]>=target, that is if equal return
-the mid index altogether if no other element greater than the mid value is found.
+-> "We are reducing the leftmost valid candidate/or elements greater than the target
+element, since our element is in sorted order." To its last element which is greater than 
+the target element.
+Eg:
+```java
+class Hello{
+ //2 5 8 12 17 21 29 35 -> here we will have the mid index found by our first iteration.
+ /*
+    But because our target is already greater than the mid index value, it will have
+    the other left of the mid-index, completely omitted due to principle of binary-search.
+    And because our ride-side of the mid index, has its all value greater than the target
+    element, it will keep entering the invariant, until finally when it can no longer
+    reduce, it will have the lowerBound index last time, and get us the last value
+    which has its value exactly greater than the target element.
+ */
+ public static void main(String[] args){
+ }
+}
+```
 -> ** stuff to memorize -> arr[mid] >= target. **
 
 ____________
