@@ -37,16 +37,6 @@ public int binaryTemplate(int target, int ...arr){
  //always change inside the loop.
 ```
 
-### Confusion
-```text
-Lower Bound:
--> The element to be found must be either equal or just greater than the target element.
--> Means, if equal check if there is element 
-
-Upper Bound
--> The first element that is strictly greater than the target.
-```
-
 ### Quick Differences/Tricks
 ```textmate
 Lower bound and upper bound have only one logic difference, insertion sort
@@ -56,6 +46,7 @@ Lower bound,|
 ------------ 
 -> We are considering inclusive of arr[mid]>=target, that is if equal return
 the mid index altogether if no other element greater than the mid value is found.
+-> ** stuff to memorize -> arr[mid] >= target. **
 
 ____________
 Upper Bound |
@@ -68,6 +59,7 @@ Coding example |
 lower Bound -> if(arr[mid]>=target){
     high = mid-1;
 }
+
 /*
 Even insertion sort, is same as the lower bound. 
 check if the target is found, if its found then return the index, else, check if its value
