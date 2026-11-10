@@ -20,6 +20,13 @@ public class Car extends Vehicle{
          * abstract, then you are done baby, you can't have its memory placed in the heap.
          */
         Vehicle vehicle = new Car();
-        vehicle.numberOfWheels();
+        //vehicle.numberOfWheels();
+
+        String s = "zxyzxyz";
+        char[] chars = s.toCharArray();
+        for(char c : chars){
+            System.out.println(c+" ");
+        }
+        System.out.println(Integer.MIN_VALUE);
     }
 }
