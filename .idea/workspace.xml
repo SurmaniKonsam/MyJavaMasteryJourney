@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c88442e-cf89-4827-ae3f-83ee0f8b645c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MyJavaMasteryJourney.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Course/Java_Course.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Course/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Java_Course/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_Course/src/main/java/org/example/concepts/NestedClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java_Course/src/main/java/org/example/concepts/NestedClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,98 +38,101 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Application.APIPractice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AllThreeNumbersEqualCheck.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ArrayArraylist.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ArrayClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Bank.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Car.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CarController.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CarStartManual.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Cat.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ChainedException.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CollectorExercises.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CollectorsPractice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ComparableEx.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ComparableLearning.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ComparablePractice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ComparatorComparableLearning.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ComparatorCompare.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ComparatorExample.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ComparatorExercise.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ConcurrentHashMapPractice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ConstructExercise.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ConstructorChaining.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CustomerPaymentChoice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DemoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DuplicateArray.executor&quot;: &quot;Run&quot;,
-    &quot;Application.EmployeeImplementsComparator.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Encapsulation.executor&quot;: &quot;Run&quot;,
-    &quot;Application.EncapsulationCar.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ExceptionRough.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ExerciseDuplicates.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Exercise_16_04_2026.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FibonacciSeriesTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FileReading.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FinalVariableViaConstructor.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FindMaxNumber.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FlatMapPractice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FrequencyQuestion.executor&quot;: &quot;Run&quot;,
-    &quot;Application.FrequencyWord.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HashMapExercise.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HierarchyException.executor&quot;: &quot;Run&quot;,
-    &quot;Application.JarvisNestedCarClassApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LRUPractice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LinkedHashMapConcept.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MainNestedClassExample.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MaximumNumber.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MaximumSubArraySize.executor&quot;: &quot;Run&quot;,
-    &quot;Application.NestedClass (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.NestedClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Node.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ObjectHashCodeStudy.executor&quot;: &quot;Run&quot;,
-    &quot;Application.OptionalTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Palindrome.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ParentChild.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ParentException.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RandomException.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RepeatedLetters.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Rough.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SlidingWindow.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SortedMapPractice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Started.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StreamPractice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StudentCity.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SynchronizedMap.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TargetSum.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ThreadPractice.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ToStringConcept.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TrappedWaterAlgorithm.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.example.demo.DemoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.concepts.NestedClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.main.concepts.NestedClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.main.java.concepts.NestedClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.main.java.org.example.concepts.NestedClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.org.example.Collections.Array.ArrayClass.executor&quot;: &quot;Run&quot;,
-    &quot;Application.org.example.Collections.comparableComparator.Comparator.ComparatorExample.executor&quot;: &quot;Run&quot;,
-    &quot;Application.org.example.concepts.NestedClass.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in Java_Course.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Java_Course [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Java_Course [install].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;PolymorphismMastery&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/surmanikonsam/Desktop/MyJavaMasteryJourney&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.APIPractice.executor": "Run",
+    "Application.AllThreeNumbersEqualCheck.executor": "Run",
+    "Application.ArrayArraylist.executor": "Run",
+    "Application.ArrayClass.executor": "Run",
+    "Application.Bank.executor": "Run",
+    "Application.Car.executor": "Run",
+    "Application.CarController.executor": "Run",
+    "Application.CarStartManual.executor": "Run",
+    "Application.Cat.executor": "Run",
+    "Application.ChainedException.executor": "Run",
+    "Application.CollectorExercises.executor": "Run",
+    "Application.CollectorsPractice.executor": "Run",
+    "Application.ComparableEx.executor": "Run",
+    "Application.ComparableLearning.executor": "Run",
+    "Application.ComparablePractice.executor": "Run",
+    "Application.ComparatorComparableLearning.executor": "Run",
+    "Application.ComparatorCompare.executor": "Run",
+    "Application.ComparatorExample.executor": "Run",
+    "Application.ComparatorExercise.executor": "Run",
+    "Application.ConcurrentHashMapPractice.executor": "Run",
+    "Application.ConstructExercise.executor": "Run",
+    "Application.ConstructorChaining.executor": "Run",
+    "Application.CustomerPaymentChoice.executor": "Run",
+    "Application.DemoApplication.executor": "Run",
+    "Application.DuplicateArray.executor": "Run",
+    "Application.EmployeeImplementsComparator.executor": "Run",
+    "Application.Encapsulation.executor": "Run",
+    "Application.EncapsulationCar.executor": "Run",
+    "Application.ExceptionRough.executor": "Run",
+    "Application.ExerciseDuplicates.executor": "Run",
+    "Application.Exercise_16_04_2026.executor": "Run",
+    "Application.FibonacciSeriesTest.executor": "Run",
+    "Application.FileReading.executor": "Run",
+    "Application.FinalVariableViaConstructor.executor": "Run",
+    "Application.FindMaxNumber.executor": "Run",
+    "Application.FlatMapPractice.executor": "Run",
+    "Application.FrequencyQuestion.executor": "Run",
+    "Application.FrequencyWord.executor": "Run",
+    "Application.HashMapExercise.executor": "Run",
+    "Application.HierarchyException.executor": "Run",
+    "Application.JarvisNestedCarClassApp.executor": "Run",
+    "Application.LRUPractice.executor": "Run",
+    "Application.LinkedHashMapConcept.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainNestedClassExample.executor": "Run",
+    "Application.MaximumNumber.executor": "Run",
+    "Application.MaximumSubArraySize.executor": "Run",
+    "Application.NestedClass (1).executor": "Run",
+    "Application.NestedClass.executor": "Run",
+    "Application.Node.executor": "Run",
+    "Application.ObjectHashCodeStudy.executor": "Run",
+    "Application.OptionalTest.executor": "Run",
+    "Application.Palindrome.executor": "Run",
+    "Application.ParentChild.executor": "Run",
+    "Application.ParentException.executor": "Run",
+    "Application.RandomException.executor": "Run",
+    "Application.RepeatedLetters.executor": "Run",
+    "Application.Rough.executor": "Run",
+    "Application.SlidingWindow.executor": "Run",
+    "Application.SortedMapPractice.executor": "Run",
+    "Application.Started.executor": "Run",
+    "Application.StreamPractice.executor": "Run",
+    "Application.StudentCity.executor": "Run",
+    "Application.SynchronizedMap.executor": "Run",
+    "Application.TargetSum.executor": "Run",
+    "Application.ThreadPractice.executor": "Run",
+    "Application.ToStringConcept.executor": "Run",
+    "Application.TrappedWaterAlgorithm.executor": "Run",
+    "Application.com.example.demo.DemoApplication.executor": "Run",
+    "Application.concepts.NestedClass.executor": "Run",
+    "Application.main.concepts.NestedClass.executor": "Run",
+    "Application.main.java.concepts.NestedClass.executor": "Run",
+    "Application.main.java.org.example.concepts.NestedClass.executor": "Run",
+    "Application.org.example.Collections.Array.ArrayClass.executor": "Run",
+    "Application.org.example.Collections.comparableComparator.Comparator.ComparatorExample.executor": "Run",
+    "Application.org.example.concepts.NestedClass.executor": "Run",
+    "JUnit.All in Java_Course.executor": "Run",
+    "Maven.Java_Course [clean].executor": "Run",
+    "Maven.Java_Course [install].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dsa__elite__mastery",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/surmanikonsam/Desktop/MyJavaMasteryJourney",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Java_Architect" />
@@ -152,12 +146,16 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="MyJavaMasteryJourney" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="MyJavaMasteryJourney" />
+      <option name="filePath" />
+      <method v="2" />
     </configuration>
   </component>
   <component name="TaskManager">
